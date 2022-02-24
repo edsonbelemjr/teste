@@ -1,5 +1,5 @@
 $form = new \API\Entities\Echo();
-$form->setMessage("Hello World!");
+$form->setMessage("Pepita teste!");
 try {
     $pet = $client->echo()->post($form);
 } catch (UnprocessableEntityException $e) {
