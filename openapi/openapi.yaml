@@ -9,7 +9,7 @@ info:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   x-logo:
-    url: 'https://github.com/edsonbelemjr/teste/blob/main/assets/logo.png'
+    url: 'https://i.imgur.com/x8IVu3S.png'
   description:
     $ref: ./info-description.md
 tags:
