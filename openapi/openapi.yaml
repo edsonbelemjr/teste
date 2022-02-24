@@ -2,7 +2,7 @@ openapi: 3.1.0
 info:
   version: 1.0.0
   title: Pepita.com
-  termsOfService: 'https://example.com/terms/'
+  termsOfService: '#'
   contact:
     email: edson.belem@inmetrics.com
   license:
