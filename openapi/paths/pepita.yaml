@@ -3,6 +3,21 @@ post:
     - Pepita
   summary: Pepita
   description: Recebe uma mensagem.
+  # requestBody:  
+  #   content:  
+  #   application/json:  
+  #   schema:  
+  #     type: object  
+  #     properties:  
+  #     Student ID:  
+  #       type: integer  
+  #       example: 1  
+  #     Student Name:  
+  #       type: string  
+  #       example: Peter  
+  #     Student Remarks:  
+  #       type: string  
+  #       example: High Grade Student  
   operationId: pepita
   security:
     - api_key: []

@@ -18,13 +18,13 @@ Esse projeto é responsável por fazer a integração da API desenvolvida pela P
 As validações dos campos são feitas após entre a consulta da API de entrada e o envio para as APIs. A validação é feita a partir do jsonschema utilizando a biblioteca do python jsonschema. Para cada caminho das APIs foram feitos jsonschemas que definem as regras de cada campo, e utilizando a função validate da biblioteca jsonschema
 
 # Mapa Apólice e Sinistro
-![Arquitetura](https://i.imgur.com/acSw1yS.png)
+![Arquitetura](https://i.imgur.com/et45dSU.jpeg)
 
 # Susep Sandbox
-![](https://i.imgur.com/TaYPPTi.png)
+![](https://i.imgur.com/9KG7Oxs.jpeg)
 
 # Enviar Proposta
-![](https://i.imgur.com/9MaWoxZ.png)
+![](https://i.imgur.com/qFsgpHG.jpeg)
 
 
 
