@@ -1,0 +1,27 @@
+{
+	"cnpj": "12345678901234",
+	"reclamacoes": [
+	{
+		"dataMovimento": "2020-04-11 00:01:03",
+		"identificacaoCobertura": "011",
+		"identificacaoObjetoSegurado": "007",
+		"dataReclamacao": "2020-04-11",
+		"tipoReclamacao": "04",
+		"statusReclamacao": "02",
+		"identificacaoSegurado": "04260283090",
+		"identificacaoReclamante": "04260283090",
+		"numeroApolice": "APOLICE-PREMIO-01"
+	},
+	{
+		"dataMovimento": "2020-04-21 00:01:04",
+		"identificacaoCobertura": "002",
+		"identificacaoObjetoSegurado": "002",
+		"dataReclamacao": "2020-04-22",
+		"tipoReclamacao": "07",
+		"statusReclamacao": "01",
+		"identificacaoSegurado": "32419859000126",
+		"identificacaoReclamante": "32419859000126",
+		"numeroApolice": "APOLICE-PREMIO-02"
+	}
+	]
+}

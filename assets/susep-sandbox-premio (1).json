@@ -1,0 +1,75 @@
+{
+  "cnpj": "12345678901234",
+  "premios": [
+    {
+      "numeroApolice": "APOLICE-PREMIO-01",
+      "naturezaMovimento": "01",
+      "tipoMovimento": "01",
+      "iof": 50,
+      "valorCorretagem": 500,
+      "dataInicioApolice": "2020-04-10 00:00:06",
+      "dataFimApolice": "2020-06-10 00:00:05",
+      "dataInicioCobertura": "2020-04-11 00:00:05",
+      "dataFimCobertura": "2020-05-10 00:00:05",
+      "identificacaoSegurado": "83992703002",
+      "identificacaoBeneficiario": "83992703002",
+      "seguroIntermitente": "01",
+      "dataMovimento": "2020-02-10 00:01:01",
+	  "coberturas": [
+        {
+          "identificacaoCobertura": "005",
+          "ramo": "002",
+          "maxima": 19999.99,
+          "identificacaoObjetoSegurado": "002",
+          "premioBruto": 10000.00,
+          "premioComercial": 50.05,
+          "premioRetido": 120
+        },
+        {
+          "identificacaoCobertura": "004",
+          "ramo": "002",
+          "maxima": 19999.99,
+          "identificacaoObjetoSegurado": "003",
+          "premioBruto": 20000.0,
+          "premioComercial": 60.05,
+          "premioRetido": 200
+        }
+      ]
+    },
+	{
+      "numeroApolice": "APOLICE-PREMIO-02",
+      "naturezaMovimento": "01",
+      "tipoMovimento": "01",
+      "iof": 50.10,
+      "valorCorretagem": 500.00,
+      "dataInicioApolice": "2020-04-20 00:00:06",
+      "dataFimApolice": "2020-06-20 00:00:05",
+      "dataInicioCobertura": "2020-04-21 00:00:05",
+      "dataFimCobertura": "2020-05-20 00:00:05",
+      "identificacaoSegurado": "83992703002",
+      "identificacaoBeneficiario": "83992703002",
+      "seguroIntermitente": "02",
+      "dataMovimento": "2020-02-10 00:01:02",
+	  "coberturas": [
+        {
+          "identificacaoCobertura": "002",
+          "ramo": "014",
+          "maxima": 24999.99,
+          "identificacaoObjetoSegurado": "005",
+          "premioBruto": 10000.0,
+          "premioComercial": 50.05,
+          "premioRetido": 122
+        },
+        {
+          "identificacaoCobertura": "003",
+          "ramo": "001",
+          "maxima": 34999.99,
+          "identificacaoObjetoSegurado": "001",
+          "premioBruto": 20000.0,
+          "premioComercial": 60.05,
+          "premioRetido": 201
+        }
+      ]
+    }	
+  ]
+}

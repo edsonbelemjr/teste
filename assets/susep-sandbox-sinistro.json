@@ -1,0 +1,42 @@
+{
+    "cnpj": "12345678901234",
+  	"sinistros": [
+      {
+        "dataMovimento": "2020-04-11 00:01:01",
+        "numeroSinistro": "ABCDEF-123456",
+        "numeroApolice": "APOLICE-PREMIO-01",
+        "maxima": 20000.00,
+        "identificacaoSegurado": "72035596000176",
+        "identificacaoBeneficiario": "72035596000176",
+        "identificacaoCobertura": "005",
+        "identificacaoObjetoSinistrado": "002",
+        "tipoSinistro": "01",
+        "tipoMovimento": "01",
+        "valorMovimento": 1200.50,
+        "valorMovimentoRetido": 1200.25,
+        "dataOcorrenciaSinistro": "2020-04-11",
+        "dataComunicacaoSinistro": "2020-04-12",
+		    "dataRegistroInicialSinistro": "2020-04-12",
+        "statusSinistro": "02",
+        "justificativaNegativa": "01"
+      },
+	  {
+        "dataMovimento": "2020-04-21 00:01:02",
+        "numeroSinistro": "GHIJK-78901",
+        "numeroApolice": "APOLICE-PREMIO-02",
+        "maxima": 15000.00,
+        "identificacaoSegurado": "74764252007",
+        "identificacaoBeneficiario": "74764252007",
+        "identificacaoCobertura": "012",
+        "identificacaoObjetoSinistrado": "999",
+        "tipoSinistro": "02",
+        "tipoMovimento": "06",
+        "valorMovimento": 10500.25,
+        "valorMovimentoRetido": 100.25,
+        "dataOcorrenciaSinistro": "2020-04-21",
+        "dataComunicacaoSinistro": "2020-04-22",
+		"dataRegistroInicialSinistro": "2020-04-22",
+        "statusSinistro": "01",
+        "justificativaNegativa": null
+      }]
+}

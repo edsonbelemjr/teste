@@ -1,0 +1,30 @@
+{
+	"cnpj": "12345678901234",
+	"dadosContabeis": [{
+		"mesReferencia": 202101,
+		"premioEmitido": 10000.00, 
+		"quantidadeApolicesEmitidas": 10,
+		"quantidadeRiscosVigentes": 11,
+		"quantidadeReclamacoes": 12,
+		"quantidadeSinistrosAvisados": 13,
+		"quantidadeSinistrosPagos": 14,
+		"ativosFinanceiros": 1111.01,
+		"intangiveis": 1111.02,
+		"demaisAtivos": 1111.03,
+		"provisaoPremiosNaoGanhos": 1111.04,
+		"provisaoSinistrosLiquidar": 1111.05,
+		"provisaoSinistrosOcorridosNaoAvisados": 1111.06,
+		"provisaoValoresRegularizar": 1111.07,
+		"outrasProvisoesTecnicas": 1111.08,
+		"valorTotalSinistrosPagosMes": 1111.09,
+		"demaisPassivos": 1111.10,
+		"valorPatrimonioLiquido": 1111.11,
+		"cmr": 21.82,
+		"estruturaSimplificada": true,
+		"valorTotalPremiosEmitidosRetidos": 111,
+		"valorAtivoResseguroProvisoesTecnicas": 1111.13,
+		"valorAtivoResseguroRedutor": 1111.14,
+		"valorTotalSinistrosAvisados": 1111.15,
+		"valorTotalSinistrosAvisadosRetidos": 11
+	}]
+}
