@@ -17,21 +17,23 @@ Esse projeto é responsável por fazer a integração da API desenvolvida pela P
 
 As validações dos campos são feitas após entre a consulta da API de entrada e o envio para as APIs. A validação é feita a partir do jsonschema utilizando a biblioteca do python jsonschema. Para cada caminho das APIs foram feitos jsonschemas que definem as regras de cada campo, e utilizando a função validate da biblioteca jsonschema
 
-# Mapa Apólice e Sinistro
+# Mapas
+
+## Mapa Apólice e Sinistro
 ![Arquitetura](https://i.imgur.com/et45dSU.jpeg)
 
-# Susep Sandbox
+## Susep Sandbox
 ![](https://i.imgur.com/9KG7Oxs.jpeg)
 
-# Enviar Proposta
+## Enviar Proposta
 ![](https://i.imgur.com/qFsgpHG.jpeg)
 
 
 
 
 
-
-# susep-auth-token-response
+# Jsons
+## susep-auth-token-response
 ```
 {
     "access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc0YTc2ZTVlODRhNjg2ZWIyZThhYzU3NmJmNDlkMjA5IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1ODgyNTQ4NzUsImV4cCI6MTU4ODI1ODQ3NSwiaXNzIjoiaHR0cDovL2hvbW9sb2cyLnN1c2VwLmdvdi5ici9zYWZlL2F1dGVudGljYWNhbyIsImF1ZCI6WyJodHRwOi8vaG9tb2xvZzIuc3VzZXAuZ292LmJyL3NhZmUvYXV0ZW50aWNhY2FvL3Jlc291cmNlcyIsInNyZC53ZWIiXSwiY2xpZW50X2lkIjoic3JkLndlYiIsInN1YiI6IjNhZDkyMDIzLTBhNGMtNDdiNC1iYzIyLTEwOGRmNTM5ZDIzZSIsImF1dGhfdGltZSI6MTU4ODI1NDg3NSwiaWRwIjoibG9jYWwiLCJuYW1lIjoiVGVzdGUgU3VzZXAiLCJlbnRpZGFkZUlkIjoiMiIsImp0aSI6ImQxMGMwMmRkNGQyOTJlYzFhMDhmNzZlNDU1NDk2MTVmIiwic2NvcGUiOlsic3JkLndlYiJdLCJhbXIiOlsicHdkIl19.YdADx6qEGEjL6EvdHaeBOvo0PWjKqhu9tyIzYfUDqN2iRgOUFbW7DAfXmWl5Yb4W_nt5kPi1lSxug5O5HBFT27YrjJOyu3NkXWq9NXGzznZUuJj4WB6FtTRd82PenvbRdPo0J_4vz_eaHMk5Nqe9AuiVuDhaYxV-ocYHl9HHy0-a3F0trIm3ZfwnnVmH4ILV5Wpc6Jkr7-jZWDV78z0BdUcNior6LVLZFKAvcSBvw57Agw8GcjKwrKJQA7LRSjjUmHxCLlJX0I0T2v3UaUzXIkMgRbc O-OaYuuavG5CJInLDn7XejrYJGG8tYiw556ARAUeYtEDJDbyIYW036-CGg",
@@ -40,7 +42,7 @@ As validações dos campos são feitas após entre a consulta da API de entrada 
 }
 ```
 
-# susep-sandbox-sinistropendente
+## susep-sandbox-sinistropendente
 ```
 {
     "cnpj": "12345678901234",
@@ -81,7 +83,7 @@ As validações dos campos são feitas após entre a consulta da API de entrada 
 }
 ```
 
-# susep-sandbox-sinistro
+## susep-sandbox-sinistro
 ```
 {
     "cnpj": "12345678901234",
@@ -127,7 +129,7 @@ As validações dos campos são feitas após entre a consulta da API de entrada 
 }
 ```
 
-# susep-sandbox-premio 
+## susep-sandbox-premio 
 ```
 {
   "cnpj": "12345678901234",
@@ -206,7 +208,7 @@ As validações dos campos são feitas após entre a consulta da API de entrada 
 }
 ```
 
-# susep-sandbox-contabil-1sem
+## susep-sandbox-contabil-1sem
 ```
 {
 	"cnpj": "12345678901234",
@@ -240,7 +242,7 @@ As validações dos campos são feitas após entre a consulta da API de entrada 
 }
 ```
 
-# susep-sandbox-reclamacao
+## susep-sandbox-reclamacao
 ```
 {
 	"cnpj": "12345678901234",
