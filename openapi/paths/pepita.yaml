@@ -42,9 +42,9 @@ post:
         application/xml:
           schema:
             type: string
-        text/csv:
-          schema:
-            type: string
+        # text/csv:
+        #   schema:
+        #     type: string
     '400': 
       description: Sem autorização
       $ref: ../components/responses/Problem.yaml

@@ -1,3 +1,5 @@
+![Picsel](https://i.imgur.com/yfb6p5q.jpeg)
+
 # Sobre a API e este documento
 
 É um documento que mostra de forma simples como se comunicar com a API do WebAPP da Picsel. Todos os exemplos usam o CURL padrão e foram testados em um terminal Bash/Linux comum.
@@ -313,51 +315,433 @@ reclamacoes.numeroApolice | inexistente | "Corresponde ao número/código do con
 
 ### Mapa Sandbox Contabil
 
-Campo | Equivalente Picsel | Descrição | Obrigatorio | Mascara | Tamanho | Tipo Preenchimento | Exemplo | Referencia
---- | --- | --- | --- | --- | --- | --- | --- | --- |
-cnpj |  | CNPJ da sociedade seguradora  | sim |  | 14 | Alfanumerico - AN | 01234567891011' | 
-dadosContabeis.mesReferencia |  | Ano e mês do mês de referência. (AAAAMM) _x000D_ | sim | AAAAMM | 6 | Numérico - NU | "202101 - AAAA = ano |  MM= Mês" | 
-dadosContabeis.premioEmitido |  | Valor monetário do prêmio total emitido no mês de referência. Neste campo são consideradas duas casas decimais.  | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.quantidadeApolicesEmitidas |  | Somatório da quantidade de apólices/bilhetes emitidos no mês de referência. | sim |  |  | Numérico - NU | 10 | 
-dadosContabeis.quantidadeRiscosVigentes |  | "Somatório da quantidade de riscos que vigoraram no mês de referência. Caso o risco tenha vigorado por algum intervalo de tempo |  no mês de referência |  este deverá ser contemplado neste quantitativo. " | sim |  |  | Numérico - NU | 10 | 
-dadosContabeis.quantidadeReclamacoes |  | Somatório da quantidade de reclamações recepcionadas no mês de referência. | sim |  |  | Numérico - NU | 10 | 
-dadosContabeis.quantidadeSinistrosAvisados |  | Somatório da quantidade de sinistros avisados no mês de referência.  | sim |  |  | Numérico - NU | 10 | 
-dadosContabeis.quantidadeSinistrosPagos |  | Somatório da quantidade de sinistros pagos no mês de referência. | sim |  |  | Numérico - NU | 10 | 
-dadosContabeis.ativosFinanceiros |  | Valor monetário do ativo financeiro contabilizado no último dia do mês de referência. Neste campo são consideradas duas casas decimais.  | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.intangiveis |  | Valor monetário dos intangíveis e dos custos de aquisição diferidos contabilizados no último dia do mês de referência. Neste campo são consideradas duas casas decimais.  | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.demaisAtivos |  | Valor monetário dos demais ativos no último dia do mês de referência. Neste campo são consideradas duas casas decimais.  | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.provisaoPremiosNaoGanhos |  | Valor monetário da Provisão de Prêmios Não Ganhos (PPNG) no último dia do mês de referência. Neste campo são consideradas duas casas decimais. _x000D_ | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.provisaoSinistrosLiquidar |  | Valor monetário da Provisão de Sinistros a Liquidar (PSL) no último dia do mês de referência. Neste campo são consideradas duas casas decimais. | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.provisaoSinistrosOcorridosNaoAvisados |  | Valor monetário da Provisão de Sinistros Ocorridos e não Avisados (IBNR) no último dia do mês de referência. Neste campo são consideradas duas casas decimais.  | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.provisaoValoresRegularizar |  | Valor monetário da Provisão de Valores a Regularizar no último dia do mês de referência. Neste campo são consideradas duas casas decimais. _x000D_ | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.outrasProvisoesTecnicas |  | Valor monetário de Outras Provisões Técnicas no último dia do mês de referência. Neste campo são consideradas duas casas decimais. _x000D_ | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.valorTotalSinistrosPagosMes |  | Valor monetário dos sinistros pagos no mês de referência. Neste campo são consideradas duas casas decimais. _x000D_ | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.demaisPassivos |  | Valor monetário dos demais passivos no último dia do mês de referência. Neste campo são consideradas duas casas decimais. _x000D_ | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.valorPatrimonioLiquido |  | Valor monetário do Patrimônio Líquido no último dia do mês de referência. Neste campo são consideradas duas casas decimais. _x000D_ | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.cmr |  | Valor monetário do Capital Mínimo Requerido (CMR) no último dia do mês de referência. Neste campo são consideradas duas casas decimais | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.estruturaSimplificada |  | "Determinar a opção no qual a seguradora com autorização temporária está enquadrada em seus investimentos |  no mês de referência. " | sim |  |  | Boolean | True / False | 
-dadosContabeis.valorTotalPremiosEmitidosRetidos |  | "Valor monetário de prêmio emitido retido |  líquido de cosseguro e resseguro |  no mês de referência. _x000D_" | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.valorAtivoResseguroProvisoesTecnicas |  | "Valor monetário do ativo de resseguro |  no último dia do mês de referência" | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.valorAtivoResseguroRedutor |  | "Valor oferecido no mês de referência como ativo de resseguro redutor da necessidade de cobertura de provisões técnicas |  no último dia do mês de referência. " | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.valorTotalSinistrosAvisados |  | Valor monetário dos sinistros avisados no mês de referência. _x000D_ | sim |  |  | Numérico - NU | "10000 | 00" | 
-dadosContabeis.valorTotalSinistrosAvisadosRetidos |  | "Valor monetário de sinistro avisado retido |  líquido de cosseguro e resseguro |  no mês de referência." | sim |  |  | Numérico - NU | "10000 | 00" | 
+<div style="overflow-x:auto;">
+<table style='width: 2800px;'>
+    <thead>
+        <tr>
+            <th>Campo</th>
+            <th>Equivalente Picsel</th>
+            <th style='width: 1400px; !important'>Descrição</th>
+            <th>Obrigatorio</th>
+            <th>Mascara</th>
+            <th>Tamanho</th>
+            <th>Tipo Preenchimento</th>
+            <th>Exemplo</th>
+            <th>Referencia</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>cnpj</td>
+            <td></td>
+            <td>CNPJ da sociedade seguradora </td>
+            <td>sim</td>
+            <td></td>
+            <td>14</td>
+            <td>Alfanumerico - AN</td>
+            <td>01234567891011</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.mesReferencia</td>
+            <td></td>
+            <td>Ano e mês do mês de referência. (AAAAMM) _x000D_</td>
+            <td>sim</td>
+            <td>AAAAMM</td>
+            <td>6</td>
+            <td>Numérico - NU</td>
+            <td>202101 - AAAA = ano, MM= Mês</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.premioEmitido</td>
+            <td></td>
+            <td>Valor monetário do prêmio total emitido no mês de referência. Neste campo são consideradas duas casas decimais. </td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.quantidadeApolicesEmitidas</td>
+            <td></td>
+            <td>Somatório da quantidade de apólices/bilhetes emitidos no mês de referência.</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.quantidadeRiscosVigentes</td>
+            <td></td>
+            <td>Somatório da quantidade de riscos que vigoraram no mês de referência. Caso o risco tenha vigorado por algum intervalo de tempo, no mês de referência, este deverá ser contemplado neste quantitativo. </td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.quantidadeReclamacoes</td>
+            <td></td>
+            <td>Somatório da quantidade de reclamações recepcionadas no mês de referência.</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.quantidadeSinistrosAvisados</td>
+            <td></td>
+            <td>Somatório da quantidade de sinistros avisados no mês de referência. </td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.quantidadeSinistrosPagos</td>
+            <td></td>
+            <td>Somatório da quantidade de sinistros pagos no mês de referência.</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.ativosFinanceiros</td>
+            <td></td>
+            <td>Valor monetário do ativo financeiro contabilizado no último dia do mês de referência. Neste campo são consideradas duas casas decimais. </td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.intangiveis</td>
+            <td></td>
+            <td>Valor monetário dos intangíveis e dos custos de aquisição diferidos contabilizados no último dia do mês de referência. Neste campo são consideradas duas casas decimais. </td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.demaisAtivos</td>
+            <td></td>
+            <td>Valor monetário dos demais ativos no último dia do mês de referência. Neste campo são consideradas duas casas decimais. </td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.provisaoPremiosNaoGanhos</td>
+            <td></td>
+            <td>Valor monetário da Provisão de Prêmios Não Ganhos (PPNG) no último dia do mês de referência. Neste campo são consideradas duas casas decimais. _x000D_</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.provisaoSinistrosLiquidar</td>
+            <td></td>
+            <td>Valor monetário da Provisão de Sinistros a Liquidar (PSL) no último dia do mês de referência. Neste campo são consideradas duas casas decimais.</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.provisaoSinistrosOcorridosNaoAvisados</td>
+            <td></td>
+            <td>Valor monetário da Provisão de Sinistros Ocorridos e não Avisados (IBNR) no último dia do mês de referência. Neste campo são consideradas duas casas decimais. </td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+          <tr>
+            <td>dadosContabeis.provisaoValoresRegularizar</td>
+            <td></td>
+            <td>Valor monetário da Provisão de Valores a Regularizar no último dia do mês de referência. Neste campo são consideradas duas casas decimais. _x000D_</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+          <tr>
+            <td>dadosContabeis.outrasProvisoesTecnicas</td>
+            <td></td>
+            <td>Valor monetário de Outras Provisões Técnicas no último dia do mês de referência. Neste campo são consideradas duas casas decimais. _x000D_</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+          <tr>
+            <td>dadosContabeis.valorTotalSinistrosPagosMes</td>
+            <td></td>
+            <td>Valor monetário dos sinistros pagos no mês de referência. Neste campo são consideradas duas casas decimais. _x000D_</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+          <tr>
+            <td>dadosContabeis.demaisPassivos</td>
+            <td></td>
+            <td>Valor monetário dos demais passivos no último dia do mês de referência. Neste campo são consideradas duas casas decimais. _x000D_</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+          <tr>
+            <td>dadosContabeis.valorPatrimonioLiquido</td>
+            <td></td>
+            <td>Valor monetário do Patrimônio Líquido no último dia do mês de referência. Neste campo são consideradas duas casas decimais. _x000D_</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+          <tr>
+            <td>dadosContabeis.cmr</td>
+            <td></td>
+            <td>Valor monetário do Capital Mínimo Requerido (CMR) no último dia do mês de referência. Neste campo são consideradas duas casas decimais</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+          <tr>
+            <td>dadosContabeis.estruturaSimplificada</td>
+            <td></td>
+            <td>Determinar a opção no qual a seguradora com autorização temporária está enquadrada em seus investimentos, no mês de referência. </td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Boolean</td>
+            <td>True / False</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.valorTotalPremiosEmitidosRetidos</td>
+            <td></td>
+            <td>Valor monetário de prêmio emitido retido, líquido de cosseguro e resseguro, no mês de referência. _x000D_</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.valorAtivoResseguroProvisoesTecnicas</td>
+            <td></td>
+            <td>Valor monetário do ativo de resseguro, no último dia do mês de referência</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.valorAtivoResseguroRedutor</td>
+            <td></td>
+            <td>Valor oferecido no mês de referência como ativo de resseguro redutor da necessidade de cobertura de provisões técnicas, no último dia do mês de referência. </td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.valorTotalSinistrosAvisados</td>
+            <td></td>
+            <td>Valor monetário dos sinistros avisados no mês de referência. _x000D_</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dadosContabeis.valorTotalSinistrosAvisadosRetidos</td>
+            <td></td>
+            <td>Valor monetário de sinistro avisado retido, líquido de cosseguro e resseguro, no mês de referência.</td>
+             <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>10000,00</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
 
 ### Mapa Sandbox Sinistro Pendente
 
-Campo | Equivalente Picsel | Descrição | Obrigatorio | Mascara | Tamanho | Tipo Preenchimento | Exemplo | Referencia
-cnpj |  | CNPJ da sociedade seguradora  | sim |  | 14 | Alfanumerico - AN | 01234567891011' | 
-sinistrosPendentes.mesReferencia | sinistros.DataHora | Ano e mês do mês de referência. | sim | AAAASS | 6 | Numérico - NU | "201601 - AAAA = ano |  SS = semestre" |  
-sinistrosPendentes.ramo |  | Código do ramo a que se refere o movimento e que se encontra no edital de seleção no qual a supervisionada se submeteu. _x000D_ | sim |  | 3 | Alfanumerico - AN | 002' | "TABELA 04 – RAMOS (DE ACORDO COM O EDITAL)  |  pg 9 e 10"
-sinistrosPendentes.numeroSinistro | sinistros.ID | "Corresponde ao número dado pela seguradora à comunicação da ocorrência de um evento (sinistro). Inclui o dígito verificador |  se houver" | sim |  |  | Alfanumerico - AN | """ABCDEF-123456""" | 
-sinistrosPendentes.numeroApolice | sinistros.IDSeguros | "Corresponde ao número/código do contrato do seguro |  preenchido de acordo com a legislação vigente |  incluindo o dígito verificador se houver" | sim |  |  | Alfanumerico - AN | """APOLICE-PREMIO-01""" | 
-sinistrosPendentes.dataOcorrenciaSinistro | sinistros.DataHora | Data de ocorrência do sinistro. O formato do campo deve ser: AAAA-MM-DD _x000D_ | sim | AAAA-MM-DD |  | Data - DT | """2021-06-01"" - AAAA = ano |  MM = mês |  DD = dia" | 
-sinistrosPendentes.dataComunicacaoSinistro |  | Data em que a seguradora recebeu o aviso do sinistro. O formato do campo deve ser: AAAA-MM-DD  | sim | AAAA-MM-DD |  | Data - DT | """2021-05-30"" - AAAA = ano |  MM = mês |  DD = dia" | 
-sinistrosPendentes.dataRegistroInicialSinistro | "Sinistros.DataSinistro
-" | Data em que a seguradora registrou a ocorrência do sinistro. O formato do campo deve ser: AAAA-MM-DD _x000D_ | sim | AAAA-MM-DD |  | Data - DT | """2021-05-30"" - AAAA = ano |  MM = mês |  DD = dia" | 
-sinistrosPendentes.valorSinistroPendente |  | Valor do Sinistro pendente no mês de referência. Neste campo são consideradas duas casas decimais. _x000D_ | sim |  |  | Numérico - NU | "1111 | 02" | 
-sinistrosPendentes.valorSinistroPendenteRetido |  | Valor de Sinistro pendente retido no mês de referência. Neste campo são consideradas duas casas decimais.  |  |  |  | Numérico - NU | "1111 | 02" | 
-
-
+<div style="overflow-x:auto;">
+<table style='width: 2800px;'>
+    <thead>
+        <tr>
+            <th>Campo</th>
+            <th>Equivalente Picsel</th>
+            <th style='width: 1000px; !important'>Descrição</th>
+            <th>Obrigatorio</th>
+            <th>Mascara</th>
+            <th>Tamanho</th>
+            <th>Tipo Preenchimento</th>
+            <th>Exemplo</th>
+            <th>Referencia</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>cnpj</td>
+            <td> </td>
+            <td>CNPJ da sociedade seguradora</td>
+            <td>sim</td>
+            <td> </td>
+            <td>14</td>
+            <td>Alfanumerico - AN</td>
+            <td>01234567891011'</td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>sinistrosPendentes.mesReferencia</td>
+            <td>sinistros.DataHora</td>
+            <td>Ano e mês do mês de referência.</td>
+            <td>sim</td>
+            <td>AAAASS</td>
+            <td>6</td>
+            <td>Numérico - NU</td>
+            <td>"201601 - AAAA = ano SS = semestre"</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>sinistrosPendentes.ramo</td>
+            <td></td>
+            <td>Código do ramo a que se refere o movimento e que se encontra no edital de seleção no qual a supervisionada se submeteu. _x000D_</td>
+            <td>sim</td>
+            <td></td>
+            <td>3</td>
+            <td>Alfanumerico - AN</td>
+            <td>002'</td>
+            <td>"TABELA 04 – RAMOS (DE ACORDO COM O EDITAL) pg 9 e 10"</td>
+        </tr>
+        <tr>
+            <td>sinistrosPendentes.numeroSinistro</td>
+            <td>sinistros.ID</td>
+            <td>Corresponde ao número dado pela seguradora à comunicação da ocorrência de um evento (sinistro). Inclui o dígito verificador, se houver</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Alfanumerico - AN</td>
+            <td>"ABCDEF-123456"</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>sinistrosPendentes.numeroApolice</td>
+            <td>sinistros.IDSeguros</td>
+            <td>Corresponde ao número/código do contrato do seguro, preenchido de acordo com a legislação vigente, incluindo o dígito verificador se houver</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Alfanumerico - AN</td>
+            <td>"APOLICE-PREMIO-01"</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>sinistrosPendentes.dataComunicacaoSinistro</td>
+            <td></td>
+            <td>Data em que a seguradora recebeu o aviso do sinistro. O formato do campo deve ser: AAAA-MM-DD </td>
+            <td>sim</td>
+            <td>AAAA-MM-DD</td>
+            <td></td>
+            <td>Data - DT</td>
+            <td>"2021-05-30" - AAAA = ano, MM = mês, DD = dia</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>sinistrosPendentes.dataRegistroInicialSinistro</td>
+            <td>Sinistros.DataSinistro</td>
+            <td>Data em que a seguradora registrou a ocorrência do sinistro. O formato do campo deve ser: AAAA-MM-DD _x000D_</td>
+            <td>sim</td>
+            <td>AAAA-MM-DD</td>
+            <td></td>
+            <td>Data - DT</td>
+            <td>"2021-05-30" - AAAA = ano, MM = mês, DD = dia</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>sinistrosPendentes.valorSinistroPendente</td>
+            <td></td>
+            <td>Valor do Sinistro pendente no mês de referência. Neste campo são consideradas duas casas decimais. _x000D_</td>
+            <td>sim</td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>1111,02</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>sinistrosPendentes.valorSinistroPendenteRetido</td>
+            <td></td>
+            <td>Valor de Sinistro pendente retido no mês de referência. Neste campo são consideradas duas casas decimais. </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Numérico - NU</td>
+            <td>1111,02</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+</div>
 
 
 
