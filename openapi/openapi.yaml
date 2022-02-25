@@ -15,22 +15,22 @@ info:
 tags:
   - name: Pepita
     description: Esta api corresponde ao processo Pepita.
-  - name: User
-    description: Operações sobre os usuários.
-  - name: Tag
-    description: Essa é a tag de descrição
+  # - name: User
+  #   description: Operações sobre os usuários.
+  # - name: Tag
+  #   description: Essa é a tag de descrição
 servers:
   - url: 'http://example.com/api/v1'
   - url: 'https://example.com/api/v1'
 paths:
-  '/users/{username}':
-    $ref: 'paths/users@{username}.yaml'
+  # '/users/{username}':
+  #   $ref: 'paths/users@{username}.yaml'
   /pepita:
     $ref: paths/pepita.yaml
-  /pathItem:
-    $ref: paths/path-item.yaml
-  /pathItemWithExamples:
-    $ref: paths/path-item-with-examples.yaml
+  # /pathItem:
+  #   $ref: paths/path-item.yaml
+  # /pathItemWithExamples:
+  #   $ref: paths/path-item-with-examples.yaml
 components:
   # Autenticação
   securitySchemes:
