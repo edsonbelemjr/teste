@@ -32,6 +32,7 @@ paths:
   /pathItemWithExamples:
     $ref: paths/path-item-with-examples.yaml
 components:
+  # Autenticação
   securitySchemes:
     main_auth:
       type: oauth2

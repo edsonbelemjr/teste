@@ -1,7 +1,7 @@
 post:
   tags:
     - Pepita
-  summary: Pepita teste
+  summary: Pepita
   description: Recebe uma mensagem.
   operationId: pepita
   security:
@@ -28,8 +28,8 @@ post:
           description: Senha do usuário.
           schema:
             type: string
-        # X-Expires-After:
-        #   $ref: ../components/headers/ExpiresAfter.yaml
+        X-Expires-After:
+          $ref: ../components/headers/ExpiresAfter.yaml
       content:
         application/json:
           schema:
@@ -49,10 +49,10 @@ post:
       description: Sem autorização
       $ref: ../components/responses/Problem.yaml
     '403':
-      description: Forbidden
+      description: Proibido
       $ref: ../components/responses/Problem.yaml
     '404':
-      description: User not found
+      description: Não encontrado
       $ref: ../components/responses/Problem.yaml
   requestBody:
     content:
@@ -66,10 +66,10 @@ post:
           example: O teste Pepita deu certo!
     description: Pepita payload
     required: true
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/pepita/post.cs"
-    - lang: PHP
-      source:
-        $ref: "../code_samples/PHP/pepita/post.php"
+  # x-codeSamples:
+  #   - lang: "C#"
+  #     source:
+  #       $ref: "../code_samples/csharp/pepita/post.cs"
+  #   - lang: PHP
+  #     source:
+  #       $ref: "../code_samples/PHP/pepita/post.php"
