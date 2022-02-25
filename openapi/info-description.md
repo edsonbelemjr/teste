@@ -501,9 +501,9 @@ Não possue parâmetros
 }
 ```
 
-## PicSel SUSEP 
+# PicSel SUSEP 
 
-### Mapa Sandbox Sinistro
+## Mapa Sandbox Sinistro
 Campo                               | Equivalente Picsel   | Descrição                                                                                                | Obrigatorio  | Mascara             | Tamanho | Tipo Preenchimento | Exemplo                   | Referencia
 ----------------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------- | ------------ | ------------------- | ------- | ------------------ | ------------------------- | --------- 
 cnpj                                | inexistente          | CNPJ da sociedade seguradora                                                                             | sim          |                     | 14      | Alfanumerico - AN  | 01234567891011'           |           
@@ -526,14 +526,14 @@ sinistros.dataRegistroInicialSinistro | sinistros.DataHora | Data em que a segur
 sinistros.statusSinistro | inexistente | Corresponde à situação do sinistro no momento do registro da movimentação. Tabela de Referência 09  | sim |  | 2 | Alfanumerico - AN | """01""" | "TABELA 09 – STATUS DO SINISTRO |  pg 11 e 12"
 sinistros.justificativaNegativa | inexistente | Corresponde à justificativa em caso de negativa de sinistro. Tabela de Referência 10 | sim |  | 2 | Alfanumerico - AN | """01""" | "TABELA 10 – JUSTIFICATIVA DE NEGATIVA |  pg 12"
 
-### Mapa Cancelar Sinistros
+## Mapa Cancelar Sinistros
 
 Campo | Equivalente Picsel | Descrição | Obrigatorio | Mascara | Tamanho | Tipo Preenchimento | Exemplo
 --- | --- | --- | --- | --- | --- | --- | --- |
 nrApolice | seguros.id | Número da apólice | Sim | N.A. | 20 | Alfanumérico sem caracter especial - AS | -
 idSinistro |  | Identificador/código gerado pelo MAPA (Ao enviar sinistro) | Sim | N.A. | 9 | Numérico - NU | -
 
-### Mapa Sandbox Premio
+## Mapa Sandbox Premio
 
 Campo | Equivalente Picsel | Descrição | Obrigatorio | Mascara | Tamanho | Tipo Preenchimento | Exemplo | Referencia
 --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -559,7 +559,7 @@ premios.coberturas.premioBruto | inexistente | "Valor monetário do prêmio brut
 premios.coberturas.premioComercial | checar base | Valor monetário do prêmio comercial considerando duas casas decimais | sim |  |  | Numérico - NU | "10000 | 00" | 
 premios.coberturas.premioRetido | inexistente | Valor monetário do prêmio retido. Prêmio retido = prêmio emitido – prêmio de cosseguro cedido – prêmios cedidos em resseguro. _x000D_ | sim |  |  | Numérico - NU | "10000 | 00" | 
 
-### Mapa Sandbox Reclamação
+## Mapa Sandbox Reclamação
 
 Campo | Equivalente Picsel | Descrição | Obrigatorio | Mascara | Tamanho | Tipo Preenchimento | Exemplo | Referencia
 --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -574,7 +574,7 @@ reclamacoes.identificacaoSegurado | inexistente | Corresponde ao CPF ou CNPJ do 
 reclamacoes.identificacaoReclamante | inexistente | Corresponde ao CPF ou CNPJ do Reclamante | sim |  | 11 ou 14 | Alfanumerico - AN | 01234567891011' | 
 reclamacoes.numeroApolice | inexistente | "Corresponde ao número/código do contrato do seguro |  preenchido de acordo com a legislação vigente |  incluindo o dígito verificador se houver" | sim |  |  | Alfanumerico - AN | """APOLICE-PREMIO-01""" | 
 
-### Mapa Sandbox Contabil
+## Mapa Sandbox Contabil
 
 <div style="overflow-x:auto;">
 <table style='width: 2700px;'>
@@ -883,7 +883,7 @@ reclamacoes.numeroApolice | inexistente | "Corresponde ao número/código do con
 </div>
 
 
-### Mapa Sandbox Sinistro Pendente
+## Mapa Sandbox Sinistro Pendente
 
 <div style="overflow-x:auto;">
 <table style='width: 2800px;'>
