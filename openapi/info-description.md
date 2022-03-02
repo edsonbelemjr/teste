@@ -1002,7 +1002,7 @@ premios.coberturas.premioRetido | inexistente | Valor monetário do prêmio reti
 ## Mapa Sandbox Sinistro Pendente
 
 <div style="overflow-x:auto;">
-<table style='width: 2700px;'>
+<table style='width: 2600px;'>
     <thead>
         <tr>
             <th>Campo</th>
