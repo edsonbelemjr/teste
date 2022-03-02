@@ -562,7 +562,7 @@ premios.coberturas.premioRetido | inexistente | Valor monetário do prêmio reti
 ## Mapa Sandbox Reclamação
 
 <div style="overflow-x:auto;">
-    <table style='width: 2700px;'>
+    <table style='width: 2500px;'>
         <thead>
             <tr>
                 <th>Campo</th>
