@@ -67,6 +67,7 @@ O AWS SSO nos permite gerenciar com rapidez e facilidade o acesso dos colaborado
 Link para acesso ao AWS SSO: https://picsel.awsapps.com/start
 Foi enviado por e-mail a forma de acesso que os colaboradores que já possuíam conta IAM na AWS da Picsel devem utilizar para realizar o acesso no AWS SSO.
 Para futuros colaboradores, deve-se realizar apenas a criação da conta SSO e conceder as devidas permissões.
+<br>
 ![Picsel](https://i.imgur.com/khcibPC.png)
 
 7. Disponibilidade de serviços
@@ -97,24 +98,26 @@ A ferramenta insider não é uma ferramenta open, deve-se verificar com a Picsel
 12. Lei Geral de Proteção de Dados – LGPD
 A LGPD (Lei nº 13.709/2018) foi sancionada em agosto de 2018 e entrou em vigor em agosto de 2020, estabelecendo como data limite para adequação o mês de maio de 2021.
 O objetivo da LGPD é bem claro: proteger dados pessoais (sensíveis ou não) e garantir privacidade aos usuários da Internet. 
-
+<br>
 O que seriam dados pessoais e dados pessoais sensíveis?
 O art. 5º, inciso I, da LGPD conceitua dados pessoais como: “informação relacionada a pessoa natural identificada ou identificável.” São esses dados cadastrais, data de nascimento, profissão, dados de GPS, identificadores eletrônicos, nacionalidade, gostos, interesses e hábitos de consumo, entre outros. 
+<br>
 O inciso II, do art. 5º, conceitua dados sensíveis sendo todo aquele com conteúdo “sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural.” Ou seja, são aqueles dados que podem levar a discriminação de uma pessoa e, por tal motivo, devem ser considerados e tratados como dados sensíveis.
+<br>
 Essa diferenciação é feita pois o uso de dados pessoais sensíveis deverá ser realizado com mais cuidado, já que um possível incidente de vazamento de dados com esse tipo de dado poderia causar consequências graves. Uma boa prática é não solicitar esses dados ao cliente caso não seja extremamente necessário.
 A Autoridade Nacional de Proteção de Dados (ANPD) é responsável por fiscalizar a adequação à Lei, verificar denúncias e aplicar sanções apropriadas. O descumprimento da LGPD implicará no caso de agentes públicos, punições próprias da improbidade administrativa. Já no caso das instituições privadas, a advertência e aplicação de pesadas sanções.
-
+<br>
     12.1 Boas Práticas para inserir a LGPD no projeto
     Crie uma política de privacidade:  É importante informar aos usuários quais informações coletadas serão usadas e por quais motivos elas foram solicitadas. Deve ficar claro como os dados serão armazenados e os responsáveis nos casos de vazamentos e violações. Inclua as medidas de segurança e o que será adotado para inibir qualquer constrangimento. É preciso comunicar também se os dados são compartilhados com terceiros – o que não é indicado. O proprietário do site precisa informar ainda como os cookies são utilizados e em quais canais os usuários poderão entrar em contato com a empresa. Inclua o período em que essas informações ficarão armazenadas, assim como o processo utilizado para excluí-las. Não se esqueça de disponibilizar um link para que o usuário cancele o cadastro ou reveja suas opções a qualquer momento.  
 
     Atente-se às páginas de contato: A maioria dos sites tem uma área padrão para que o usuário entre em contato com o proprietário da página. Para isso, esse ambiente dispõe de um formulário com campos para preenchimento do nome, e-mail e uma mensagem opcional. Nós já falamos aqui que os dados pessoais devem ser utilizados apenas mediante o claro consentimento do usuário, certo? Para garantir isso nas páginas de contato, você pode: 
 
-    • Adicionar uma caixa de seleção ao formulário de contato. O usuário deve confirmar, por meio da seleção da opção, que leu e concorda com os termos e política de privacidade do site. 
-    • Incluir links clicáveis facilitando para que o usuário leia os termos de consentimento e a política de privacidade. Tome cuidado para que sejam abertos em uma nova guia para que o usuário não tenha que deixar a página original. 
-    • Fazer com que esse campo de consentimento seja obrigatório para que o usuário prossiga. Não deixe a caixa de seleção pré-selecionada. 
-    • Incluir na descrição do conteúdo outras formas de contato: um número de telefone, e-mail, endereço e botões para acesso às redes sociais.
-    • Informar ao usuário que o acesso ao conteúdo e seu livre e pessoal consentimento podem ser executados apenas para maiores de idade. Menores de 18 anos devem receber o aval de seus responsáveis legais; 
-    • Parece óbvio, mas é fundamental que todos os dados coletados no formulário sejam armazenados de forma segura, como por exemplo, no sistema de gerenciamento de conteúdo do seu site. Essas informações devem ser salvas em uma página protegida por um certificado SSL, que estabelece um link criptografado entre o servidor e o navegador.
+• Adicionar uma caixa de seleção ao formulário de contato. O usuário deve confirmar, por meio da seleção da opção, que leu e concorda com os termos e política de privacidade do site. 
+• Incluir links clicáveis facilitando para que o usuário leia os termos de consentimento e a política de privacidade. Tome cuidado para que sejam abertos em uma nova guia para que o usuário não tenha que deixar a página original. 
+• Fazer com que esse campo de consentimento seja obrigatório para que o usuário prossiga. Não deixe a caixa de seleção pré-selecionada. 
+• Incluir na descrição do conteúdo outras formas de contato: um número de telefone, e-mail, endereço e botões para acesso às redes sociais.
+• Informar ao usuário que o acesso ao conteúdo e seu livre e pessoal consentimento podem ser executados apenas para maiores de idade. Menores de 18 anos devem receber o aval de seus responsáveis legais; 
+• Parece óbvio, mas é fundamental que todos os dados coletados no formulário sejam armazenados de forma segura, como por exemplo, no sistema de gerenciamento de conteúdo do seu site. Essas informações devem ser salvas em uma página protegida por um certificado SSL, que estabelece um link criptografado entre o servidor e o navegador.
 
 	Investir em cibersegurança:  Não há um requisito específico na lei que obrigue a instalação de um certificado SSL em seu site (o famoso cadeado verde na barra de endereços do navegador HTML), mas é uma boa prática de cibersegurança que ele seja inserido. Certificados de segurança no site garantem maior confiabilidade e inibem mensagens de erro como “este site não é seguro”. Além disso, na prática, por meio deles, os dados preenchidos em formulários podem ser criptografados antes do envio ao servidor, o que protege as informações pessoais dos usuários. Outra vantagem de instalar certificados de segurança é o ranqueamento em ferramentas de busca, garantindo uma melhor classificação e resultados de visualização. Deve-se também realizar auditorias periódicas e gestão de vulnerabilidades nos locais em que os dados são armazenados, ter um plano de contingência para casos de violação. 
 
