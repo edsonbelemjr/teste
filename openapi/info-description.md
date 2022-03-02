@@ -73,7 +73,7 @@ Link para acesso ao AWS SSO: https://picsel.awsapps.com/start
 Foi enviado por e-mail a forma de acesso que os colaboradores que já possuíam conta IAM na AWS da Picsel devem utilizar para realizar o acesso no AWS SSO.
 
 Para futuros colaboradores, deve-se realizar apenas a criação da conta SSO e conceder as devidas permissões.
-
+![(./assets/aws-sso.png)]
 
 7. Disponibilidade de serviços
 A arquitetura configurada no PEPITA deve contar com gerenciamento de fila (utilizando o recurso Serverless Application Model – SAM da AWS, ou similar) e balanceamento de cargo. Para assim, garantir a escalabilidade e a continuidade da disponibilização dos serviços disponibilizados em nuvem pela Picsel. Os serviços devem manter a capacidade através de múltiplas Zonas de Disponibilidade com serviços de backup para recovery. 
@@ -96,6 +96,7 @@ Deve-se separar os ambientes de Desenvolvimento/Testes/Homologação do ambiente
 
     10.1 AWS Organizations
     Aws Organization está habilitado e temos as contas de DEV, PROD e HOMOL. Desta forma iremos realizar um gerenciamento centralizado das contas da AWS e manter uma melhor organização do desenvolvimento e aplicação dos serviços e produtos sem gerar impactos no ambiente de produção. As contas de ambiente já possuem o SCP de perímetro.
+![(./assets/aws-organizations.png)]
 
 
 11. Análise de Vulnerabilidades 
