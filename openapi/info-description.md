@@ -45,14 +45,11 @@ Todas as normas aqui estabelecidas serão seguidas à risca por todos colaborado
 1. Comunicação do Sistema 
 Todas as etapas de comunicação do sistema, principalmente nos acessos externos à nuvem, deverão contar com agentes identificados. 
 
-
 2. API’s de acesso interno
 Os acessos deverão ser limitados às VPCs (Virtual Private Cloud) correspondentes de modo a não permitir acesso externo. Cada recurso para acessar uma API deve conter uma chave correspondente. 
 
-
 3. API’s de acesso externo
 Estas API’s devem ser RESTful e contar com autenticação OAUTH2.0. Cada agente externo deverá ser cadastrado e terá acesso somente aos recursos autorizados para este usuário. Além disso cada agente externo deve ter seu acesso limitado em termos de número de requisições.
-
 
 4. Roles e Policies
 Devem ser configuradas para que nenhum recurso do sistema tenha permissões que não sejam necessárias à sua função. Portanto, os componentes do sistema devem ter seus privilégios elencados e ter acesso somente aos recursos necessários para execução dos mesmos. Seguindo assim, as políticas de confiança ZERO da AWS.
@@ -61,7 +58,6 @@ Devem ser configuradas para que nenhum recurso do sistema tenha permissões que 
     Criação da SCP para limitar perímetro de produtos e serviços. 
     As contas de ambientes já possuem a SCP aplicada. A SCP criada permite apenas produtos e serviços nas regiões:  us-east-1, us-east-2, sa-east-1. Portanto, ao utilizar as contas de ambiente não será permitido o acesso a outras regiões que não as citadas acima. 
  		
-
 5. Logins e Senhas
 Ao realizar a configuração interna de logins e senhas, estes devem ser armazenados no serviço AWS Secrets Manager, ou serviço semelhante. Deve ser realizada a renovação periódica das senhas.
 
@@ -69,27 +65,20 @@ Ao realizar a configuração interna de logins e senhas, estes devem ser armazen
 6. AWS SSO (Single Sign-On)
 O AWS SSO nos permite gerenciar com rapidez e facilidade o acesso dos colaboradores as contas da AWS. É possível criar a identidade dos usuários diretamente no AWS SSO e assim foi feito na Picsel. É indicado que contas empresariais utilizem o AWS SSO por oferecer um melhor gerenciamento para múltiplas contas e também por fornecer aos colaboradores um único local para acessar contas diferentes. O serviço do AWS SSO é um serviço gratuito. 
 Link para acesso ao AWS SSO: https://picsel.awsapps.com/start
-
 Foi enviado por e-mail a forma de acesso que os colaboradores que já possuíam conta IAM na AWS da Picsel devem utilizar para realizar o acesso no AWS SSO.
-
 Para futuros colaboradores, deve-se realizar apenas a criação da conta SSO e conceder as devidas permissões.
 ![Picsel](https://i.imgur.com/khcibPC.png)
 
 7. Disponibilidade de serviços
 A arquitetura configurada no PEPITA deve contar com gerenciamento de fila (utilizando o recurso Serverless Application Model – SAM da AWS, ou similar) e balanceamento de cargo. Para assim, garantir a escalabilidade e a continuidade da disponibilização dos serviços disponibilizados em nuvem pela Picsel. Os serviços devem manter a capacidade através de múltiplas Zonas de Disponibilidade com serviços de backup para recovery. 
 
-
 8. Gerenciamento de código fonte
 Uma ferramenta para gerenciamento de código fonte permite organizar a interação entre desenvolvedores, garantir a integridade e possibilitar o gerenciamento de versões do código, evitando equívocos quanto a versão colocada em produção. Ex de ferramentas: GitLab, GitHub, BitBucket e etc.
 
-
 9. Buckets
 Para a criação de Buckets temos algumas boas práticas a serem seguidas, boas práticas essas que são apontadas pela própria AWS. 
-
 Segue o link para verificação: https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/security-best-practices.html
-
 Essas boas práticas tem como objetivo melhorar a seguração do S3 e evitar assim possíveis invasões e roubos de dados.
-
 
 10. Separação de Ambientes
 Deve-se separar os ambientes de Desenvolvimento/Testes/Homologação do ambiente de Produção. Utilizar bancos de dados distintos para cada ambiente. Utilizar servidores de aplicação/web distintos para cada ambiente. Prover acesso ao ambiente de Desenvolvimento/Testes/Homologação apenas aos integrantes da equipe de desenvolvimento e aos interessados no projeto (stakeholders). Deve-se realizar testes periódicos para assegurar a segurança do ambiente de desenvolvimento/testes/homologação. Não se deve fornecer as senhas de acesso ao ambiente de produção aos desenvolvedores.
@@ -98,21 +87,17 @@ Deve-se separar os ambientes de Desenvolvimento/Testes/Homologação do ambiente
     Aws Organization está habilitado e temos as contas de DEV, PROD e HOMOL. Desta forma iremos realizar um gerenciamento centralizado das contas da AWS e manter uma melhor organização do desenvolvimento e aplicação dos serviços e produtos sem gerar impactos no ambiente de produção. As contas de ambiente já possuem o SCP de perímetro.
 ![](./assets/aws-organizations.png)
 
-
 11. Análise de Vulnerabilidades 
 Deve ser utilizada ferramenta de segurança para análise do código a ser entregue. Essa análise tem como objetivo encontrar possíveis vulnerabilidades no código que podem colocar em risco as informações da empresa. 
-
 É uma boa pratica verificar sempre se as bibliotecas utilizadas possuem vulnerabilidades, na utilização do Python por exemplo, é possível utilizar o pip para verificar se há alguma biblioteca com vulnerabilidade. Caso seja encontrada deve-se verificar se há alguma atualização sem a vulnerabilidade ou a correção da mesma.
-
 Indicamos a utilização da ferramenta Insider, a mesma pode ser executada tanto pontualmente quanto em esteiras, integrando com o CI/CD. A indicação da ferramenta Insider é por ela utilizar as tecnologias SAST (Static Application Security Testing), SCA (Software Composition Analysis) e DRA (Digital Risk Analysis) em uma única análise. 
-
 O Insider encontra vulnerabilidades em Android, Android-Java, Android-Kotlin, Java Gradle, Java Maven, Typescript, Javascript, AngularJS, Ionic, React, React Native, Swift (IOS), C#, Ruby on rails, Python e Flutter.
-
 A ferramenta insider não é uma ferramenta open, deve-se verificar com a Picsel o interesse em adquirir a mesma ou a decisão por utilizar uma ferramenta open (Ex: Horusec) que não terá tantos recursos disponíveis.
 
 12. Lei Geral de Proteção de Dados – LGPD
 A LGPD (Lei nº 13.709/2018) foi sancionada em agosto de 2018 e entrou em vigor em agosto de 2020, estabelecendo como data limite para adequação o mês de maio de 2021.
 O objetivo da LGPD é bem claro: proteger dados pessoais (sensíveis ou não) e garantir privacidade aos usuários da Internet. 
+
 O que seriam dados pessoais e dados pessoais sensíveis?
 O art. 5º, inciso I, da LGPD conceitua dados pessoais como: “informação relacionada a pessoa natural identificada ou identificável.” São esses dados cadastrais, data de nascimento, profissão, dados de GPS, identificadores eletrônicos, nacionalidade, gostos, interesses e hábitos de consumo, entre outros. 
 O inciso II, do art. 5º, conceitua dados sensíveis sendo todo aquele com conteúdo “sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural.” Ou seja, são aqueles dados que podem levar a discriminação de uma pessoa e, por tal motivo, devem ser considerados e tratados como dados sensíveis.
@@ -124,12 +109,12 @@ A Autoridade Nacional de Proteção de Dados (ANPD) é responsável por fiscaliz
 
     Atente-se às páginas de contato: A maioria dos sites tem uma área padrão para que o usuário entre em contato com o proprietário da página. Para isso, esse ambiente dispõe de um formulário com campos para preenchimento do nome, e-mail e uma mensagem opcional. Nós já falamos aqui que os dados pessoais devem ser utilizados apenas mediante o claro consentimento do usuário, certo? Para garantir isso nas páginas de contato, você pode: 
 
-        • Adicionar uma caixa de seleção ao formulário de contato. O usuário deve confirmar, por meio da seleção da opção, que leu e concorda com os termos e política de privacidade do site. 
-        • Incluir links clicáveis facilitando para que o usuário leia os termos de consentimento e a política de privacidade. Tome cuidado para que sejam abertos em uma nova guia para que o usuário não tenha que deixar a página original. 
-        • Fazer com que esse campo de consentimento seja obrigatório para que o usuário prossiga. Não deixe a caixa de seleção pré-selecionada. 
-        • Incluir na descrição do conteúdo outras formas de contato: um número de telefone, e-mail, endereço e botões para acesso às redes sociais.
-        • Informar ao usuário que o acesso ao conteúdo e seu livre e pessoal consentimento podem ser executados apenas para maiores de idade. Menores de 18 anos devem receber o aval de seus responsáveis legais; 
-        • Parece óbvio, mas é fundamental que todos os dados coletados no formulário sejam armazenados de forma segura, como por exemplo, no sistema de gerenciamento de conteúdo do seu site. Essas informações devem ser salvas em uma página protegida por um certificado SSL, que estabelece um link criptografado entre o servidor e o navegador.
+    • Adicionar uma caixa de seleção ao formulário de contato. O usuário deve confirmar, por meio da seleção da opção, que leu e concorda com os termos e política de privacidade do site. 
+    • Incluir links clicáveis facilitando para que o usuário leia os termos de consentimento e a política de privacidade. Tome cuidado para que sejam abertos em uma nova guia para que o usuário não tenha que deixar a página original. 
+    • Fazer com que esse campo de consentimento seja obrigatório para que o usuário prossiga. Não deixe a caixa de seleção pré-selecionada. 
+    • Incluir na descrição do conteúdo outras formas de contato: um número de telefone, e-mail, endereço e botões para acesso às redes sociais.
+    • Informar ao usuário que o acesso ao conteúdo e seu livre e pessoal consentimento podem ser executados apenas para maiores de idade. Menores de 18 anos devem receber o aval de seus responsáveis legais; 
+    • Parece óbvio, mas é fundamental que todos os dados coletados no formulário sejam armazenados de forma segura, como por exemplo, no sistema de gerenciamento de conteúdo do seu site. Essas informações devem ser salvas em uma página protegida por um certificado SSL, que estabelece um link criptografado entre o servidor e o navegador.
 
 	Investir em cibersegurança:  Não há um requisito específico na lei que obrigue a instalação de um certificado SSL em seu site (o famoso cadeado verde na barra de endereços do navegador HTML), mas é uma boa prática de cibersegurança que ele seja inserido. Certificados de segurança no site garantem maior confiabilidade e inibem mensagens de erro como “este site não é seguro”. Além disso, na prática, por meio deles, os dados preenchidos em formulários podem ser criptografados antes do envio ao servidor, o que protege as informações pessoais dos usuários. Outra vantagem de instalar certificados de segurança é o ranqueamento em ferramentas de busca, garantindo uma melhor classificação e resultados de visualização. Deve-se também realizar auditorias periódicas e gestão de vulnerabilidades nos locais em que os dados são armazenados, ter um plano de contingência para casos de violação. 
 
