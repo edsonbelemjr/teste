@@ -17,7 +17,7 @@ Esse projeto é responsável por fazer a integração da API desenvolvida pela P
 
 As validações dos campos são feitas após entre a consulta da API de entrada e o envio para as APIs. A validação é feita a partir do jsonschema utilizando a biblioteca do python jsonschema. Para cada caminho das APIs foram feitos jsonschemas que definem as regras de cada campo, e utilizando a função validate da biblioteca jsonschema
 
-# Mapas
+# Arquitetura
 
 ## Mapa Apólice e Sinistro
 ![Arquitetura](https://i.imgur.com/et45dSU.jpeg)
@@ -32,7 +32,7 @@ As validações dos campos são feitas após entre a consulta da API de entrada 
 
 
 
-# Jsons
+# Payloads SUSEP - Sandbox Regulatório
 ## susep-auth-token-response
 ```
 {
@@ -278,7 +278,7 @@ As validações dos campos são feitas após entre a consulta da API de entrada 
 
 
 
-# Dados referente ao Mapa
+# Payloads MAPA
 
 ## Picsel - MAPA - payload - 2.2 - Consultar Culturas Subvencionáveis
 ```
@@ -561,18 +561,135 @@ premios.coberturas.premioRetido | inexistente | Valor monetário do prêmio reti
 
 ## Mapa Sandbox Reclamação
 
-Campo | Equivalente Picsel | Descrição | Obrigatorio | Mascara | Tamanho | Tipo Preenchimento | Exemplo | Referencia
---- | --- | --- | --- | --- | --- | --- | --- | --- |
-cnpj | inexistente | CNPJ da sociedade seguradora  | sim |  | 14 | Alfanumerico - AN | 01234567891011' | 
-reclamacoes.dataMovimento | inexistente | Corresponde à data referente ao lançamento do movimento. O formato do campo deve ser: AAAA-MM-DD HH:MM:SS | sim | AAAA-MM-DD HH:MM:SS | 19 | Data e Hora | """2020-04-11 00:01:03""" | 
-reclamacoes.identificacaoCobertura | inexistente | Corresponde ao tipo de cobertura contratada. Tabela de Referência 05 | sim |  | 3 | Alfanumerico - AN | """011""" | "TABELA 05 – TIPOS DE COBERTURA |  pg 10"
-reclamacoes.identificacaoObjetoSegurado | inexistente | Corresponde ao tipo de objeto coberto. Tabela de Referência 06  | sim |  | 3 | Alfanumerico - AN | """007""" | "TABELA 06 – TIPOS DE OBJETO |  pg 11"
-reclamacoes.dataReclamacao | inexistente | Data em que a reclamação foi feita na seguradora contra a seguradora _x000D_ | sim | AAAA-MM-DD |  | Data - DT | """2020-04-11""" | 
-reclamacoes.tipoReclamacao | inexistente | Tipo de reclamação efetuada pelo segurado de acordo com a tabela da referência. Tabela de Referência 12 | sim |  | 2 | Alfanumerico - AN | """04""" | "TABELA 12 – TIPO DA RECLAMAÇÃO |  pg 12"
-reclamacoes.statusReclamacao. | inexistente | Corresponde à situação da reclamação no momento do registro da informação. Tabela de Referência 11 | sim |  | 2 | Alfanumerico - AN | """04""" | "TABELA 11 – STATUS DA RECLAMAÇÃO _x000D_ |  pg 12"
-reclamacoes.identificacaoSegurado | inexistente | Corresponde ao CPF ou CNPJ do Segurado | sim |  | 11 ou 14 | Alfanumerico - AN | 01234567891011' | 
-reclamacoes.identificacaoReclamante | inexistente | Corresponde ao CPF ou CNPJ do Reclamante | sim |  | 11 ou 14 | Alfanumerico - AN | 01234567891011' | 
-reclamacoes.numeroApolice | inexistente | "Corresponde ao número/código do contrato do seguro |  preenchido de acordo com a legislação vigente |  incluindo o dígito verificador se houver" | sim |  |  | Alfanumerico - AN | """APOLICE-PREMIO-01""" | 
+<div style="overflow-x:auto;">
+    <table style='width: 2700px;'>
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Equivalente Picsel</th>
+                <th>Descrição</th>
+                <th>Obrigatorio</th>
+                <th>Mascara</th>
+                <th>Tamanho</th>
+                <th>Tipo Preenchimento</th>
+                <th>Exemplo</th>
+                <th>Referencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cnpj</td>
+                <td>Aguardando Implementação</td>
+                <td>CNPJ da sociedade seguradora </td>
+                <td>sim</td>
+                <td></td>
+                <td>14</td>
+                <td>Alfanumerico - AN</td>
+                <td>01234567891011'</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>reclamacoes.dataMovimento</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde à data referente ao lançamento do movimento. O formato do campo deve ser: AAAA-MM-DD HH:MM:SS</td>
+                <td>sim</td>
+                <td>AAAA-MM-DD HH:MM:SS</td>
+                <td>19</td>
+                <td>Data e Hora</td>
+                <td>"2020-04-11 00:01:03"</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>reclamacoes.identificacaoCobertura</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde ao tipo de cobertura contratada. Tabela de Referência 05</td>
+                <td>sim</td>
+                <td></td>
+                <td>3</td>
+                <td>Alfanumerico - AN</td>
+                <td>"011"</td>
+                <td>TABELA 05 – TIPOS DE COBERTURA, pg 10</td>
+            </tr>
+            <tr>
+                <td>reclamacoes.identificacaoObjetoSegurado</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde ao tipo de objeto coberto. Tabela de Referência 06 </td>
+                <td>sim</td>
+                <td></td>
+                <td>3</td>
+                <td>Alfanumerico - AN</td>
+                <td>"007"</td>
+                <td>TABELA 06 – TIPOS DE OBJETO, pg 11</td>
+            </tr>
+            <tr>
+                <td>reclamacoes.dataReclamacao</td>
+                <td>Aguardando Implementação</td>
+                <td>Data em que a reclamação foi feita na seguradora contra a seguradora _x005F_x000D_</td>
+                <td>sim</td>
+                <td>AAAA-MM-DD</td>
+                <td></td>
+                <td>Data - DT</td>
+                <td>"2020-04-11"</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>reclamacoes.tipoReclamacao</td>
+                <td>Aguardando Implementação</td>
+                <td>Tipo de reclamação efetuada pelo segurado de acordo com a tabela da referência. Tabela de Referência 12</td>
+                <td>sim</td>
+                <td></td>
+                <td>2</td>
+                <td>Alfanumerico - AN</td>
+                <td>"04"</td>
+                <td>TABELA 12 – TIPO DA RECLAMAÇÃO, pg 12</td>
+            </tr>
+            <tr>
+                <td>reclamacoes.statusReclamacao.</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde à situação da reclamação no momento do registro da informação. Tabela de Referência 11</td>
+                <td>sim</td>
+                <td></td>
+                <td>2</td>
+                <td>Alfanumerico - AN</td>
+                <td>"04"</td>
+                <td>TABELA 11 – STATUS DA RECLAMAÇÃO _x005F_x000D_, pg 12</td>
+            </tr>
+            <tr>
+                <td>reclamacoes.identificacaoSegurado</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde ao CPF ou CNPJ do Segurado</td>
+                <td>sim</td>
+                <td></td>
+                <td>11 ou 14</td>
+                <td>Alfanumerico - AN</td>
+                <td>01234567891011'</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>reclamacoes.identificacaoReclamante</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde ao CPF ou CNPJ do Reclamante</td>
+                <td>sim</td>
+                <td></td>
+                <td>11 ou 14</td>
+                <td>Alfanumerico - AN</td>
+                <td>01234567891011'</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>reclamacoes.numeroApolice</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde ao número/código do contrato do seguro, preenchido de acordo com a legislação vigente, incluindo o dígito verificador se houver</td>
+                <td>sim</td>
+                <td></td>
+                <td></td>
+                <td>Alfanumerico - AN</td>
+                <td>"APOLICE-PREMIO-01"</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 ## Mapa Sandbox Contabil
 
@@ -881,7 +998,6 @@ reclamacoes.numeroApolice | inexistente | "Corresponde ao número/código do con
     </tbody>
 </table>
 </div>
-
 
 ## Mapa Sandbox Sinistro Pendente
 
