@@ -67,7 +67,7 @@ O AWS SSO nos permite gerenciar com rapidez e facilidade o acesso dos colaborado
 Link para acesso ao AWS SSO: https://picsel.awsapps.com/start
 Foi enviado por e-mail a forma de acesso que os colaboradores que já possuíam conta IAM na AWS da Picsel devem utilizar para realizar o acesso no AWS SSO.
 Para futuros colaboradores, deve-se realizar apenas a criação da conta SSO e conceder as devidas permissões.
-<br>
+
 ![Picsel](https://i.imgur.com/khcibPC.png)
 
 7. Disponibilidade de serviços
@@ -86,7 +86,8 @@ Deve-se separar os ambientes de Desenvolvimento/Testes/Homologação do ambiente
 
     10.1 AWS Organizations
     Aws Organization está habilitado e temos as contas de DEV, PROD e HOMOL. Desta forma iremos realizar um gerenciamento centralizado das contas da AWS e manter uma melhor organização do desenvolvimento e aplicação dos serviços e produtos sem gerar impactos no ambiente de produção. As contas de ambiente já possuem o SCP de perímetro.
-![](./assets/aws-organizations.png)
+![](https://i.imgur.com/LWWvMeq.png)
+
 
 11. Análise de Vulnerabilidades 
 Deve ser utilizada ferramenta de segurança para análise do código a ser entregue. Essa análise tem como objetivo encontrar possíveis vulnerabilidades no código que podem colocar em risco as informações da empresa. 
