@@ -92,7 +92,7 @@ Deve-se separar os ambientes de Desenvolvimento/Testes/Homologação do ambiente
 11. Análise de Vulnerabilidades 
 Deve ser utilizada ferramenta de segurança para análise do código a ser entregue. Essa análise tem como objetivo encontrar possíveis vulnerabilidades no código que podem colocar em risco as informações da empresa. 
 É uma boa pratica verificar sempre se as bibliotecas utilizadas possuem vulnerabilidades, na utilização do Python por exemplo, é possível utilizar o pip para verificar se há alguma biblioteca com vulnerabilidade. Caso seja encontrada deve-se verificar se há alguma atualização sem a vulnerabilidade ou a correção da mesma.
-Indicamos a utilização da ferramenta Insider, a mesma pode ser executada tanto pontualmente quanto em esteiras, integrando com o CI/CD. A indicação da ferramenta Insider é por ela utilizar as tecnologias SAST (Static Application Security Testing), SCA (Software Composition Analysis) e DRA (Digital Risk Analysis) em uma única análise. 
+Indicamos a utilização da ferramenta Insider, a mesma pode ser executada tanto pontualmente quanto em esteiras, integrando com o CI/CD. A indicação da ferramenta Insider é por ela utilizar as tecnologias SAST (Static Application Security Testing), SCA (Software Composition Analysis) e DRA (Digital Risk Analysis) em uma única análise.
 O Insider encontra vulnerabilidades em Android, Android-Java, Android-Kotlin, Java Gradle, Java Maven, Typescript, Javascript, AngularJS, Ionic, React, React Native, Swift (IOS), C#, Ruby on rails, Python e Flutter.
 A ferramenta insider não é uma ferramenta open, deve-se verificar com a Picsel o interesse em adquirir a mesma ou a decisão por utilizar uma ferramenta open (Ex: Horusec) que não terá tantos recursos disponíveis.
 
@@ -100,7 +100,7 @@ A ferramenta insider não é uma ferramenta open, deve-se verificar com a Picsel
 A LGPD (Lei nº 13.709/2018) foi sancionada em agosto de 2018 e entrou em vigor em agosto de 2020, estabelecendo como data limite para adequação o mês de maio de 2021.
 O objetivo da LGPD é bem claro: proteger dados pessoais (sensíveis ou não) e garantir privacidade aos usuários da Internet. 
 
-O que seriam dados pessoais e dados pessoais sensíveis?
+**O que seriam dados pessoais e dados pessoais sensíveis?**
 O art. 5º, inciso I, da LGPD conceitua dados pessoais como: “informação relacionada a pessoa natural identificada ou identificável.” São esses dados cadastrais, data de nascimento, profissão, dados de GPS, identificadores eletrônicos, nacionalidade, gostos, interesses e hábitos de consumo, entre outros. 
 
 O inciso II, do art. 5º, conceitua dados sensíveis sendo todo aquele com conteúdo “sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural.” Ou seja, são aqueles dados que podem levar a discriminação de uma pessoa e, por tal motivo, devem ser considerados e tratados como dados sensíveis.
