@@ -141,7 +141,7 @@ A Autoridade Nacional de Proteção de Dados (ANPD) é responsável por fiscaliz
 
 ## susep-auth-token-response
 
-## susep-sandbox-sinistro-pendente
+## susep-sandbox-sini-pendente
 
 ## susep-sandbox-sinistro
 
