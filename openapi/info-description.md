@@ -139,7 +139,17 @@ A Autoridade Nacional de Proteção de Dados (ANPD) é responsável por fiscaliz
 
 # Payloads SUSEP - Sandbox Regulatório
 
+## susep-auth-token-response
 
+## susep-sandbox-sinistropendente
+
+## susep-sandbox-sinistro
+
+## susep-sandbox-premio
+
+## susep-sandbox-contabil-1sem
+
+## susep-sandbox-reclamacao
 
 
 
