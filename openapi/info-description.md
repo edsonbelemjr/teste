@@ -111,21 +111,16 @@ O Insider encontra vulnerabilidades em Android, Android-Java, Android-Kotlin, Ja
 A ferramenta insider não é uma ferramenta open, deve-se verificar com a Picsel o interesse em adquirir a mesma ou a decisão por utilizar uma ferramenta open (Ex: Horusec) que não terá tantos recursos disponíveis.
 
 12. Lei Geral de Proteção de Dados – LGPD
-
 A LGPD (Lei nº 13.709/2018) foi sancionada em agosto de 2018 e entrou em vigor em agosto de 2020, estabelecendo como data limite para adequação o mês de maio de 2021.
 O objetivo da LGPD é bem claro: proteger dados pessoais (sensíveis ou não) e garantir privacidade aos usuários da Internet. 
-
 O que seriam dados pessoais e dados pessoais sensíveis?
 O art. 5º, inciso I, da LGPD conceitua dados pessoais como: “informação relacionada a pessoa natural identificada ou identificável.” São esses dados cadastrais, data de nascimento, profissão, dados de GPS, identificadores eletrônicos, nacionalidade, gostos, interesses e hábitos de consumo, entre outros. 
-
 O inciso II, do art. 5º, conceitua dados sensíveis sendo todo aquele com conteúdo “sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural.” Ou seja, são aqueles dados que podem levar a discriminação de uma pessoa e, por tal motivo, devem ser considerados e tratados como dados sensíveis.
-
 Essa diferenciação é feita pois o uso de dados pessoais sensíveis deverá ser realizado com mais cuidado, já que um possível incidente de vazamento de dados com esse tipo de dado poderia causar consequências graves. Uma boa prática é não solicitar esses dados ao cliente caso não seja extremamente necessário.
-
 A Autoridade Nacional de Proteção de Dados (ANPD) é responsável por fiscalizar a adequação à Lei, verificar denúncias e aplicar sanções apropriadas. O descumprimento da LGPD implicará no caso de agentes públicos, punições próprias da improbidade administrativa. Já no caso das instituições privadas, a advertência e aplicação de pesadas sanções.
 
     12.1 Boas Práticas para inserir a LGPD no projeto
-	Crie uma política de privacidade:  É importante informar aos usuários quais informações coletadas serão usadas e por quais motivos elas foram solicitadas. Deve ficar claro como os dados serão armazenados e os responsáveis nos casos de vazamentos e violações. Inclua as medidas de segurança e o que será adotado para inibir qualquer constrangimento. É preciso comunicar também se os dados são compartilhados com terceiros – o que não é indicado. O proprietário do site precisa informar ainda como os cookies são utilizados e em quais canais os usuários poderão entrar em contato com a empresa. Inclua o período em que essas informações ficarão armazenadas, assim como o processo utilizado para excluí-las. Não se esqueça de disponibilizar um link para que o usuário cancele o cadastro ou reveja suas opções a qualquer momento.
+    Crie uma política de privacidade:  É importante informar aos usuários quais informações coletadas serão usadas e por quais motivos elas foram solicitadas. Deve ficar claro como os dados serão armazenados e os responsáveis nos casos de vazamentos e violações. Inclua as medidas de segurança e o que será adotado para inibir qualquer constrangimento. É preciso comunicar também se os dados são compartilhados com terceiros – o que não é indicado. O proprietário do site precisa informar ainda como os cookies são utilizados e em quais canais os usuários poderão entrar em contato com a empresa. Inclua o período em que essas informações ficarão armazenadas, assim como o processo utilizado para excluí-las. Não se esqueça de disponibilizar um link para que o usuário cancele o cadastro ou reveja suas opções a qualquer momento.  
 
     Atente-se às páginas de contato: A maioria dos sites tem uma área padrão para que o usuário entre em contato com o proprietário da página. Para isso, esse ambiente dispõe de um formulário com campos para preenchimento do nome, e-mail e uma mensagem opcional. Nós já falamos aqui que os dados pessoais devem ser utilizados apenas mediante o claro consentimento do usuário, certo? Para garantir isso nas páginas de contato, você pode: 
 
