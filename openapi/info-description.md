@@ -606,28 +606,166 @@ Não possue parâmetros
 
 # PicSel SUSEP 
 
-## Mapa Sandbox Sinistro
-Campo                               | Equivalente Picsel   | Descrição                                                                                                | Obrigatorio  | Mascara             | Tamanho | Tipo Preenchimento | Exemplo                   | Referencia
------------------------------------ | -------------------- | -------------------------------------------------------------------------------------------------------- | ------------ | ------------------- | ------- | ------------------ | ------------------------- | --------- 
-cnpj                                | inexistente          | CNPJ da sociedade seguradora                                                                             | sim          |                     | 14      | Alfanumerico - AN  | 01234567891011'           |           
-sinistros.dataMovimento             | sinistros.DataHora   | Corresponde à data referente ao lançamento do movimento. O formato do campo deve ser: AAAAMM-DD HH:MM:SS | sim          | AAAA-MM-DD HH:MM:SS | 19      | Data e Hora        | """2020-04-11 00:01:03""" | 
-sinistros.numeroSinistro            | sinistros.idsinistro | "Corresponde ao número dado pela seguradora à comunicação da ocorrência de um evento (sinistro). Inclui o dígito verificador |  se for o caso. _x000D_" | sim |  |  | Alfanumerico - AN | """ABCDEF-123456""" | 
-sinistros.numeroApolice             | inexistente | "Corresponde ao número/código do contrato do seguro |  preenchido de acordo com a legislação vigente |  incluindo o dígito verificador se houver" | sim |  |  | Alfanumerico - AN | """APOLICE-PREMIO-01""" | 
-sinistros.maxima                    | checar base | Valor monetário da maior importância segurada para cobertura de um risco isolado. Neste campo são consideradas duas casas decimais. | sim |  |  | Numérico - NU | "10000 | 00" | 
-sinistros.identificacaoSegurado     | Seguros.seguros.CPFProdutor | Corresponde ao CPF ou CNPJ do Segurado | sim |  | 11 ou 14 | Alfanumerico - AN | 01234567891011' | 
-sinistros.identificacaoBeneficiario | inexistente | Corresponde ao CPF ou CNPJ do beneficiário | sim |  | 11 ou 14 | Alfanumerico - AN | 01234567891011' | 
-sinistros.identificacaoCobertura    | inexistente | Corresponde ao tipo de cobertura contratado. Tabela de Referência 05  | sim |  | 2 | Alfanumerico - AN | """01""" | "TABELA 05 – TIPOS DE COBERTURA |  pg 10"
-sinistros.identificacaoObjetoSinistrado | inexistente | Corresponde ao tipo de objeto sinistrado. Tabela de Referência 06 | sim |  | 3 | Alfanumerico - AN | """010""" | "TABELA 06 – TIPOS DE OBJETO |  pg 11"
-sinistros.tipoSinistro | inexistente | Corresponde ao tipo de sinistro que pode ser administrativo ou judicial. Tabela de Referência 07  | sim |  | 2 | Alfanumerico - AN | """01""" | "TABELA 07 – TIPOS DE SINISTRO |  pg 11"
-sinistros.tipoMovimento | inexistente | Corresponde ao código do tipo de movimento do sinistro. Tabela de Referência 08 | sim |  | 2 | Alfanumerico - AN | """01""" | "TABELA 08 – TIPOS DE MOVIMENTO DE SINISTRO |  pg 11"
-sinistros.valorMovimento | inexistente | Corresponde ao valor monetário movimentado no sinistro de acordo com o tipo de movimento. Neste campo são consideradas duas casas decimais | sim |  |  | Numérico - NU | "10000 | 00" | 
-sinistros.valorMovimentoRetido | inexistente | Corresponde ao valor monetário retido movimentado no sinistro de acordo com o tipo de movimento. Neste campo são consideradas duas casas decimais._x000D_ | sim |  |  | Numérico - NU | "10000 | 00" | 
-sinistros.dataOcorrenciaSinistro | "Sinistros.DataSinistro
-" | Data de ocorrência do sinistro. O formato do campo deve ser: AAAA-MM-DD  | sim | AAAA-MM-DD |  | Data - DT | """2020-04-11""" | 
-sinistros.dataComunicacaoSinistro | sinistros.DataHora | Data em que a seguradora recebeu o aviso do sinistro. O formato do campo deve ser: AAAA-MMDD | sim | AAAA-MM-DD |  | Data - DT | """2020-04-11""" | 
-sinistros.dataRegistroInicialSinistro | sinistros.DataHora | Data em que a seguradora registrou a ocorrência do sinistro. O formato do campo deve ser: AAAA-MMDD _x000D_ | sim | AAAA-MM-DD |  | Data - DT | """2020-04-11""" | 
-sinistros.statusSinistro | inexistente | Corresponde à situação do sinistro no momento do registro da movimentação. Tabela de Referência 09  | sim |  | 2 | Alfanumerico - AN | """01""" | "TABELA 09 – STATUS DO SINISTRO |  pg 11 e 12"
-sinistros.justificativaNegativa | inexistente | Corresponde à justificativa em caso de negativa de sinistro. Tabela de Referência 10 | sim |  | 2 | Alfanumerico - AN | """01""" | "TABELA 10 – JUSTIFICATIVA DE NEGATIVA |  pg 12"
+## Mapa Alterar Sinistro
+
+<div style="overflow-x:auto;">
+    <table style='width: 1300px;'>
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Equivalente Picsel</th>
+                <th>Descrição</th>
+                <th>Obrigatorio</th>
+                <th>Mascara</th>
+                <th>Tamanho</th>
+                <th>Tipo Preenchimento</th>
+                <th>Exemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>idSinistro</td>
+                <td>sinistros.idsinistro ou algo similar</td>
+                <td>Identificador/código gerado pelo MAPA (Ao enviar sinistro)</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>cdProposta</td>
+                <td>Aguardando Implementação</td>
+                <td>Código da proposta gerado pelo MAPA</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrApolice</td>
+                <td>Aguardando Implementação</td>
+                <td>Número da apólice</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>20</td>
+                <td>Alfanumérico sem caracter especial - AS</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>csSinistro</td>
+                <td>Será implementado na API</td>
+                <td>Código da situação do sinistro</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>1</td>
+                <td>Char - CH</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>cdEventoCobertura</td>
+                <td>Aguardando Implementação</td>
+                <td>Código do evento/Cobetura do sinistro</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>3</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>dtAvisoSinistro</td>
+                <td>sinistros.DataSinistro</td>
+                <td>Data do aviso do sinistro</td>
+                <td>Sim</td>
+                <td>dd/MM/yyyy</td>
+                <td>10</td>
+                <td>Data - DT</td>
+                <td>20/01/2022</td>
+            </tr>
+            <tr>
+                <td>nrAreaSinistrada</td>
+                <td>Será implementado na API</td>
+                <td>Tamanho da área sinistrada</td>
+                <td>Não</td>
+                <td>N.A.</td>
+                <td>7</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>pePerda</td>
+                <td>Aguardando Implementação</td>
+                <td>Percentual de perda</td>
+                <td>Não</td>
+                <td>N.A.</td>
+                <td>3</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>qtProdutividadeObtida</td>
+                <td>Aguardando Implementação</td>
+                <td>Produtividade Obtida (kg/ha)</td>
+                <td>Não</td>
+                <td>N.A.</td>
+                <td>8</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>dtPagamentoIndenizacao</td>
+                <td>Aguardando Implementação</td>
+                <td>Data do Pagamento da Indenização (Data do pagamento ao segurado)</td>
+                <td>Sim/Não</td>
+                <td>dd/MM/yyyy</td>
+                <td>10</td>
+                <td>Data - DT</td>
+                <td>20/01/2022</td>
+            </tr>
+            <tr>
+                <td>vlReservaTecnica</td>
+                <td>Será implementado na API</td>
+                <td>Valor da Reserva Técnica (R$) (Valor inicial do aviso do sinistro)</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>12,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>vlPagamentoIndenizacao</td>
+                <td>Será implementado na API</td>
+                <td>Valor do Pagamento da Indenização(R$) (Valor final pago ao segurado)</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>12,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrCnpjCpfVistoriador</td>
+                <td>Será implementado na API</td>
+                <td>CNPJ/CPF do Vistoriador</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>11~14</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>dtVisitaPerito</td>
+                <td>pericias.DataHora</td>
+                <td>Data da Visita do Perito</td>
+                <td>Sim</td>
+                <td>dd/MM/yyyy</td>
+                <td>10</td>
+                <td>Data - DT</td>
+                <td>20/01/2022</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 ## Mapa Cancelar Sinistros
 
