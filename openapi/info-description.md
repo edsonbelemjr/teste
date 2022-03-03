@@ -639,7 +639,7 @@ idSinistro |  | Identificador/código gerado pelo MAPA (Ao enviar sinistro) | Si
 ## Mapa Sandbox Premio
 
 <div style="overflow-x:auto;">
-    <table style='width: 2400px;'>
+    <table style='width: 2700px;'>
         <thead>
             <tr>
                 <th>Campo</th>
