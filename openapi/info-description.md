@@ -606,7 +606,7 @@ Não possue parâmetros
 
 # PicSel SUSEP 
 
-## Mapa Alterar Proposta
+## Mapa Enviar Proposta
 
 <div style="overflow-x:auto;">
     <table style='width: 2100px;'>
@@ -1255,6 +1255,654 @@ Não possue parâmetros
     </table>
 </div>
 
+## Mapa Alterar Proposta
+
+<div style="overflow-x:auto;">
+    <table style='width: 2100px;'>
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Equivalente Picsel</th>
+                <th>Descrição</th>
+                <th>Obrigatorio</th>
+                <th>Editável</th>
+                <th>Mascara</th>
+                <th>Tamanho</th>
+                <th>Tipo Preenchimento</th>
+                <th>Exemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cdProposta</td>
+                <td>Aguardando Implementação</td>
+                <td>Código da proposta gerado pelo MAPA</td>
+                <td>Sim</td>
+                <td>Não</td>
+                <td>N.A.</td>
+                <td>9</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>dtProposta</td>
+                <td>Aguardando Implementação</td>
+                <td>Data que a proposta foi gerada</td>
+                <td>Não</td>
+                <td>Não</td>
+                <td>dd/MM/yyyy</td>
+                <td>10</td>
+                <td>Data - DT</td>
+                <td>20/01/2022</td>
+            </tr>
+            <tr>
+                <td>dtInicioVigencia</td>
+                <td>seguros.DataVigenciaInicial</td>
+                <td>Data de inicio da vigência do seguro</td>
+                <td>Não</td>
+                <td>Não</td>
+                <td>dd/MM/yyyy</td>
+                <td>10</td>
+                <td>Data - DT</td>
+                <td>21/01/2022</td>
+            </tr>
+            <tr>
+                <td>dtFimVigencia</td>
+                <td>seguros.DataVigenciaFinal</td>
+                <td>Data do final da vigência do seguro</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>dd/MM/yyyy</td>
+                <td>10</td>
+                <td>Data - DT</td>
+                <td>22/01/2022</td>
+            </tr>
+            <tr>
+                <td>nrProcessoSusep</td>
+                <td>Aguardando Implementação</td>
+                <td>Número do processo enviado à SUSEP</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>17</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nmSegurado</td>
+                <td>seguros.NomeProdutor</td>
+                <td>Nome do Segurado.</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>100</td>
+                <td>Alfanumerico - AN</td>
+                <td>Jóse Joaquim da Silva</td>
+            </tr>
+            <tr>
+                <td>nrCpfCnpjSegurado</td>
+                <td>seguros.CPFProdutor</td>
+                <td>CPF ou CNPJ do Segurado, apenas os números.</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>11~14</td>
+                <td>Numérico - NU</td>
+                <td>11122233344</td>
+            </tr>
+            <tr>
+                <td>nrTelefoneSegurado</td>
+                <td>Será implementado na API</td>
+                <td>Número do telefone do segurado, apenas os numeros.</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>11</td>
+                <td>Numérico - NU</td>
+                <td>11960707070</td>
+            </tr>
+            <tr>
+                <td>nrCepSegurado</td>
+                <td>seguros.CEPProdutor</td>
+                <td>CEP do segurado, apenas os numeros.</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>8</td>
+                <td>Numérico - NU</td>
+                <td>8773000</td>
+            </tr>
+            <tr>
+                <td>txComplementoEnderecoSegurado</td>
+                <td>seguros.EnderecoProdutor</td>
+                <td>Descrição do complemento da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>50</td>
+                <td>Alfanumerico - AN</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrComplementoPropriedade</td>
+                <td>seguros.BairroProdutor</td>
+                <td>Número do complemento da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>10</td>
+                <td>Alfanumerico - AN</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>csFormatoCoordenada</td>
+                <td>Será implementado na API</td>
+                <td>Formato das coordenadas da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Char - CH</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrDecimalLatitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em decimal da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>30</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrDecimalLongitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em decimal da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>30</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrGrauLatitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em grau da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrMinutoLatitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em minuto da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrSegundoLatitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em segundo da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>csOrientacaoLatitude</td>
+                <td>Será implementado na API</td>
+                <td>Orientação da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>1</td>
+                <td>Char - CH</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrGrauLongitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em grau da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrMinutoLongitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em minuto da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrSegundoLongitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em segundo da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>csOrientacaoLongitude</td>
+                <td>Será implementado na API</td>
+                <td>Orientação da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>1</td>
+                <td>Char - CH</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>cdAtividadeBacen</td>
+                <td>Aguardando Implementação</td>
+                <td>Código da cultura emitido pelo BACEN</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>14</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrAreaTotal</td>
+                <td>seguros.AreaSegurada</td>
+                <td>Número da área total segurada</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrPe</td>
+                <td>Aguardando Implementação</td>
+                <td>Número de pés</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>7</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrPe</td>
+                <td>Aguardando Implementação</td>
+                <td>Número de pés</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>7</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrVolume</td>
+                <td>Aguardando Implementação</td>
+                <td>Número do volume</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrProdutividadeSegurada</td>
+                <td>seguros.ProdutividadeGarantida</td>
+                <td>Número de produtividade a ser sergurada (kg/ha)</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>12,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrProdutividadeEstimada</td>
+                <td>seguros.Produtividade</td>
+                <td>Número de produtividade estimada (kg/ha)</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>12,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrAnimal</td>
+                <td>Aguardando Implementação</td>
+                <td>Número de animais</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>5</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>vlLimiteGarantia</td>
+                <td>Será implementado na API</td>
+                <td>Valor do limite de garantia (LMGA)</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>14,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>vlPremio</td>
+                <td>Será implementado na API</td>
+                <td>Valor do prêmio líquido</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>14,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>vlSubvencaoFederal</td>
+                <td>Aguardando Implementação</td>
+                <td>Valor da subvenção federal</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>14,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>peNivelCobertura</td>
+                <td>Será implementado na API</td>
+                <td>Informa a porcentagem do nível de cobertura</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>cdClassificacaoProduto</td>
+                <td>Aguardando Implementação</td>
+                <td>Código da classificação do produto</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>idProgramaSubvencao</td>
+                <td>Aguardando Implementação</td>
+                <td>Identificador do programa subvenção</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>3</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>idItemUnidadeSegurada</td>
+                <td>Aguardando Implementação</td>
+                <td>Identificador da unidade segurada</td>
+                <td>Não</td>
+                <td>Não</td>
+                <td>N.A.</td>
+                <td>10</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrArea</td>
+                <td>seguros.AreaSegurada</td>
+                <td>Área – área da unidade segurada</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>idCobertura</td>
+                <td>Aguardando Implementação</td>
+                <td>Identificador da cobertura</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>10</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>cdEventoCobertura</td>
+                <td>Aguardando Implementação</td>
+                <td>Cobertura -Tipo de cobertura garantida pela proposta.</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>3</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>peFranquia</td>
+                <td>complementar do peNivelCobertura -> 100 - NC</td>
+                <td>Franquia - Percentual da Franquia.</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>4</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>vlLimiteMaximoIndenizacao</td>
+                <td>existe na base, igual ao LimiteGarantia</td>
+                <td>LMI - Limite máximo de Indenização</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>14,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>programas.programa.idProgramaSubvencao</td>
+                <td>Aguardando Implementação</td>
+                <td>Código do Programa subvenção</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>3</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.nrArea</td>
+                <td>Será implementado na API</td>
+                <td>Área – área da unidade segurada</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.coberturas.cobertura.cdEventoCobertura</td>
+                <td>Aguardando Implementação</td>
+                <td>Código de identificação do evento/cobertura do sinistro</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>3</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.coberturas.cobertura.peFranquia</td>
+                <td>complementar do peNivelCobertura -> 100 - NC</td>
+                <td>Franquia - Percentual da Franquia.</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>4</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.coberturas.areasSeguradas.coordenadasAreaSegurada.coordenada.nrDecimalLatitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em decimal da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>30</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.coberturas.areasSeguradas.coordenadasAreaSegurada.coordenada.nrDecimalLongitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em decimal da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>30</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.coberturas.areasSeguradas.coordenadasAreaSegurada.coordenada.csOrientacaoLatitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em grau da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>1</td>
+                <td>Char - CH</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.coberturas.areasSeguradas.coordenadasAreaSegurada.coordenada.csOrientacaoLatitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em grau da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>1</td>
+                <td>Char - CH</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.coberturas.areasSeguradas.coordenadasAreaSegurada.coordenada.nrGrauLatitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em minuto da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.coberturas.areasSeguradas.coordenadasAreaSegurada.coordenada.nrMinutoLatitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em segundo da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.coberturas.areasSeguradas.coordenadasAreaSegurada.coordenada.nrSegundoLatitude</td>
+                <td>Será implementado na API</td>
+                <td>Orientação da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.coberturas.areasSeguradas.coordenadasAreaSegurada.coordenada.csOrientacaoLongitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em grau da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>1</td>
+                <td>Char - CH</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.coberturas.areasSeguradas.coordenadasAreaSegurada.coordenada.nrGrauLongitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em minuto da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.coberturas.areasSeguradas.coordenadasAreaSegurada.coordenada.nrMinutoLongitude</td>
+                <td>Será implementado na API</td>
+                <td>Número em segundo da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>unidadesSeguradas.itensUnidadeSegurada.coberturas.areasSeguradas.coordenadasAreaSegurada.coordenada.nrSegundoLongitude</td>
+                <td>Será implementado na API</td>
+                <td>Orientação da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 ## Mapa Cancelar Proposta
 
