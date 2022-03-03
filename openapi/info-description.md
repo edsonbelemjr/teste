@@ -631,10 +631,45 @@ sinistros.justificativaNegativa | inexistente | Corresponde à justificativa em 
 
 ## Mapa Cancelar Sinistros
 
-Campo | Equivalente Picsel | Descrição | Obrigatorio | Mascara | Tamanho | Tipo Preenchimento | Exemplo
---- | --- | --- | --- | --- | --- | --- | --- |
-nrApolice | seguros.id | Número da apólice | Sim | N.A. | 20 | Alfanumérico sem caracter especial - AS | -
-idSinistro |  | Identificador/código gerado pelo MAPA (Ao enviar sinistro) | Sim | N.A. | 9 | Numérico - NU | -
+<div style="overflow-x:auto;">
+    <table style='width: 2700px;'>
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Equivalente Picsel</th>
+                <th>Descrição</th>
+                <th>Obrigatorio</th>
+                <th>Mascara</th>
+                <th>Tamanho</th>
+                <th>Tipo Preenchimento</th>
+                <th>Exemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>nrApolice</td>
+                <td>seguros.id</td>
+                <td>Número da apólice</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>20</td>
+                <td>Alfanumérico sem caracter especial - AS</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>idSinistro</td>
+                <td>Aguardando Implementação</td>
+                <td>Identificador/código gerado pelo MAPA (Ao enviar sinistro)</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9</td>
+                <td>Numérico - NU</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 
 ## Mapa Sandbox Premio
 
