@@ -606,6 +606,534 @@ Não possue parâmetros
 
 # PicSel SUSEP 
 
+## Mapa Alterar Apolice
+
+<div style="overflow-x:auto;">
+    <table style='width: 1500px;'>
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Equivalente Picsel</th>
+                <th>Descrição</th>
+                <th>Obrigatorio</th>
+                <th>Editável</th>
+                <th>Mascara</th>
+                <th>Tamanho</th>
+                <th>Tipo Preenchimento</th>
+                <th>Exemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cdProposta</td>
+                <td>Aguardando Implementação</td>
+                <td>Código da proposta gerado pelo MAPA</td>
+                <td>Sim</td>
+                <td>Não</td>
+                <td>N.A.</td>
+                <td>9</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrApolice</td>
+                <td>seguros.ID</td>
+                <td>Número da apólice emitida pela seguradora</td>
+                <td>Sim</td>
+                <td>Não</td>
+                <td>N.A.</td>
+                <td>10</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>dtApolice</td>
+                <td>Aguardando Implementação</td>
+                <td>Data que a apolice foi gerada</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>11</td>
+                <td>Data - DT</td>
+                <td>20/01/2022</td>
+            </tr>
+            <tr>
+                <td>nrProcessoSusep</td>
+                <td>Aguardando Implementação</td>
+                <td>Número do processo enviado à SUSEP</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>17</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nmSegurado</td>
+                <td>seguros.NomeProdutor</td>
+                <td>Nome do Segurado. Ex.: Jóse Joaquim da Silva</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>100</td>
+                <td>Alfanumérico - AN</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrTelefoneSegurado</td>
+                <td>Aguardando Implementação</td>
+                <td>Número do telefone do segurado</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>11</td>
+                <td>Numérico - NU</td>
+                <td>11960707070</td>
+            </tr>
+            <tr>
+                <td>nrCepSegurado</td>
+                <td>seguros.CEPProdutor</td>
+                <td>CEP do segurado, apenas os numeros.</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>8</td>
+                <td>Numérico - NU</td>
+                <td>8773000</td>
+            </tr>
+            <tr>
+                <td>txComplementoEnderecoSegurado</td>
+                <td>Aguardando Implementação</td>
+                <td>Complemento do endereço do segurado</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>50</td>
+                <td>Alfanumérico - AN</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrComplementoSegurado</td>
+                <td>Aguardando Implementação</td>
+                <td>Número do complemento do endereço do segurado</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>10</td>
+                <td>Alfanumérico - AN</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nmPropriedade</td>
+                <td>Aguardando Implementação</td>
+                <td>Nome da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>60</td>
+                <td>Alfanumérico - AN</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>txComplementoEnderecoPropriedade</td>
+                <td>seguros.EnderecoProdutor</td>
+                <td>Descrição do complemento da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>50</td>
+                <td>Alfanumérico - AN</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrComplementoPropriedade</td>
+                <td>seguros.BairroProdutor</td>
+                <td>Número do complemento da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>10</td>
+                <td>Alfanumérico - AN</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>csFormatoCoordenada</td>
+                <td>Aguardando Implementação</td>
+                <td>Formato das coordenadas da propriedade</td>
+                <td>Sim</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Char - CH</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrDecimalLatitude</td>
+                <td>Aguardando Implementação</td>
+                <td>Número em decimal da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>30</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrDecimalLongitude</td>
+                <td>Aguardando Implementação</td>
+                <td>Número em decimal da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>30</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrGrauLatitude</td>
+                <td>Aguardando Implementação</td>
+                <td>Número em grau da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrMinutoLatitude</td>
+                <td>Aguardando Implementação</td>
+                <td>Número em minuto da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrSegundoLatitude</td>
+                <td>Aguardando Implementação</td>
+                <td>Número em segundo da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>csOrientacaoLatitude</td>
+                <td>Aguardando Implementação</td>
+                <td>Orientação da latitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>1</td>
+                <td>Char - CH</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrGrauLongitude</td>
+                <td>Aguardando Implementação</td>
+                <td>Número em grau da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrMinutoLongitude</td>
+                <td>Aguardando Implementação</td>
+                <td>Número em minuto da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrSegundoLongitude</td>
+                <td>Aguardando Implementação</td>
+                <td>Número em segundo da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>csOrientacaoLongitude</td>
+                <td>Aguardando Implementação</td>
+                <td>Orientação da longitude da propriedade</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>1</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrAreaTotal</td>
+                <td>seguros.AreaSegurada</td>
+                <td>Número da área total segurada</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrPe</td>
+                <td>Aguardando Implementação</td>
+                <td>Número de pés</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>7</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrVolume</td>
+                <td>Aguardando Implementação</td>
+                <td>Número do volume</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrProdutividadeSegurada</td>
+                <td>seguros.ProdutividadeGarantida</td>
+                <td>Número de produtividade a ser sergurada (kg/ha)</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>12,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrProdutividadeEstimada</td>
+                <td>seguros.Produtividade</td>
+                <td>Número de produtividade estimada (kg/ha)</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>12,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrAnimal</td>
+                <td>Aguardando Implementação</td>
+                <td>Número de animais</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>5</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>vlLimiteGarantia</td>
+                <td>Aguardando Implementação</td>
+                <td>Valor do limite de garantia (LMGA)</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>14,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>vlPremio</td>
+                <td>Aguardando Implementação</td>
+                <td>Valor do prêmio líquido</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>14,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>vlSubvencaoFederal</td>
+                <td>Aguardando Implementação</td>
+                <td>Valor da subvenção federal</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>14,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>peNivelCobertura</td>
+                <td>Aguardando Implementação</td>
+                <td>Informa a porcentagem do nível de cobertura</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>cdClassificacaoProduto</td>
+                <td>Aguardando Implementação</td>
+                <td>Código da classificação do produto</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>idItemUnidadeSegurada</td>
+                <td>Aguardando Implementação</td>
+                <td>Identificador da Unidade Segurada</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>10</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrArea</td>
+                <td>seguros.AreaSegurada</td>
+                <td>Área – área da unidade segurada</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>idCobertura</td>
+                <td>Aguardando Implementação</td>
+                <td>Identificador da cobertura</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>10</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>cdEventoCobertura</td>
+                <td>Aguardando Implementação</td>
+                <td>Cobertura - Tipo de cobertura garantida pela proposta.</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>3</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>peFranquia</td>
+                <td>Aguardando Implementação</td>
+                <td>Franquia - Percentual da Franquia.</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>vlLimiteMaximoIndenizacao</td>
+                <td>Aguardando Implementação</td>
+                <td>LMI - Limite máximo de Indenização</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>14,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>itensUnidadeSegurada.idItemUnidadeSegurada</td>
+                <td>Aguardando Implementação</td>
+                <td>Identificador da Unidade Segurada</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>10</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>itensUnidadeSegurada.nrArea</td>
+                <td>Aguardando Implementação</td>
+                <td>Área – área da unidade segurada</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>cobertura.idCobertura</td>
+                <td>Aguardando Implementação</td>
+                <td>Identificador da cobertura</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>10</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>cobertura.cdEventoCobertura</td>
+                <td>Aguardando Implementação</td>
+                <td>Cobertura - Tipo de cobertura garantida pela proposta.</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>3</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>  
+            <tr>
+                <td>cobertura.peFranquia</td>
+                <td>Aguardando Implementação</td>
+                <td>Franquia - Percentual da Franquia.</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>  
+            <tr>
+                <td>cobertura.vlLimiteMaximoIndenizacao</td>
+                <td>Aguardando Implementação</td>
+                <td>LMI - Limite máximo de Indenização</td>
+                <td>Não</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>14,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>  
+        </tbody>
+    </table>
+</div>
+
 ## Mapa Cancelar Apolice
 
 <div style="overflow-x:auto;">
