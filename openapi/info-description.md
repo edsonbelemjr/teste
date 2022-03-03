@@ -609,7 +609,7 @@ Não possue parâmetros
 ## Mapa Enviar Apolice
 
 <div style="overflow-x:auto;">
-    <table style='width: 1300px;'>
+    <table style='width: 1200px;'>
         <thead>
             <tr>
                 <th>Campo</th>
