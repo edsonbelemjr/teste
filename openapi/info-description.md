@@ -609,7 +609,7 @@ Não possue parâmetros
 ## Mapa Alterar Sinistro
 
 <div style="overflow-x:auto;">
-    <table style='width: 1700px;'>
+    <table style='width: 1600px;'>
         <thead>
             <tr>
                 <th>Campo</th>
