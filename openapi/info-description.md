@@ -632,7 +632,7 @@ sinistros.justificativaNegativa | inexistente | Corresponde à justificativa em 
 ## Mapa Cancelar Sinistros
 
 <div style="overflow-x:auto;">
-    <table style='width: 2700px;'>
+    <table style='width: 2000px;'>
         <thead>
             <tr>
                 <th>Campo</th>
