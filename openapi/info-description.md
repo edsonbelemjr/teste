@@ -638,29 +638,257 @@ idSinistro |  | Identificador/código gerado pelo MAPA (Ao enviar sinistro) | Si
 
 ## Mapa Sandbox Premio
 
-Campo | Equivalente Picsel | Descrição | Obrigatorio | Mascara | Tamanho | Tipo Preenchimento | Exemplo | Referencia
---- | --- | --- | --- | --- | --- | --- | --- | --- |
-cnpj | inexistente | CNPJ da sociedade seguradora  | sim |  | 14 | Alfanumerico - AN | 01234567891011' | 
-premios.numeroApolice | inexistente | "Corresponde ao número/código do contrato do seguro |  preenchido de acordo com a legislação vigente |  incluindo o dígito verificador se houver" | sim |  |  | Alfanumerico - AN | """APOLICE-PREMIO-01""" | 
-premios.naturezaMovimento | inexistente | Corresponde à natureza do registro. Tabela de Referência 01  | sim |  | 2 | Alfanumerico - AN | """01""" | "TABELA 01 – NATUREZA DO PRÊMIO |  pg 9"
-premios.tipoMovimento | inexistente | Corresponde ao tipo de movimento relacionado a premios. Tabela de Referência 02 | sim |  | 2 | Alfanumerico - AN | """01""" | "TABELA 02 - TIPOS DE MOVIMENTO DE PRÊMIO |  pg 9"
-premios.iof | inexistente | Valor monetário do imposto – corresponde ao valor da IOF | sim |  |  | Numérico - NU | "10000 | 00" | 
-premios.valorCorretagem | inexistente | Valor monetário da comissão de corretagem do seguro – corresponde ao valor total da comissão. | sim |  |  | Numérico - NU | "10000 | 00" | 
-premios.dataInicioApolice | seguros.DataVigenciaInicial | Data em que a apólice/bilhete iniciou ou iniciará efetivamente a sua vigência. O formato do campo deve ser: AAAA-MM-DD HH:MM:SS | sim | AAAA-MM-DD HH:MM:SS | 19 | Data e Hora | """2020-04-11 00:01:03""" | 
-premios.dataFimApolice | seguros.DataVigenciaFinal | Data em que a apólice/bilhete encerrou ou encerrará efetivamente a sua vigência. O formato do campo deve ser: AAAA-MM-DD HH:MM:SS | sim | AAAA-MM-DD HH:MM:SS | 19 | Data e Hora | """2020-04-11 00:01:03""" | 
-premios.dataInicioCobertura | existente base | Data de início da cobertura. O formato do campo deve ser: AAAA-MM-DD HH:MM:SS  | sim | AAAA-MM-DD HH:MM:SS | 19 | Data e Hora | """2020-04-11 00:01:03""" | 
-premios.dataFimCobertura | existente base | Data do final da cobertura. O formato do campo deve ser: AAAA-MM-DD HH:MM:SS  | sim | AAAA-MM-DD HH:MM:SS | 19 | Data e Hora | """2020-04-11 00:01:03""" | 
-premios.identificacaoSegurado | seguros.CPFProdutor | Corresponde ao CPF ou CNPJ do Segurado | sim |  | 11 ou 14 | Alfanumerico - AN | 01234567891011' | 
-premios.identificacaoBeneficiario | inexistente | Corresponde ao CPF ou CNPJ do Beneficiario | sim |  | 11 ou 14 | Alfanumerico - AN | 01234567891011' | 
-premios.seguroIntermitente | inexistente | Corresponde à informação de se a apólice/bilhete é referente à cobertura de seguro ntermitente ou de seguro tradicional. Tabela de Referência 03  | sim |  | 2 | Alfanumerico - AN | """01""" | "TABELA 03 – SEGURO INTERMITENTE |  pg 9"
-premios.dataMovimento | inexistente | Corresponde à data referente ao lançamento do movimento. O formato do campo deve ser: AAAA-MMDD HH:MM:SS | sim | AAAA-MM-DD HH:MM:SS | 19 | Data e Hora | """2020-04-11 00:01:03""" | 
-premios.coberturas.identificacaoCobertura | inexistente | Corresponde ao tipo de cobertura contratado. Tabela de Referência 05 _x000D_ | sim |  | 3 | Alfanumerico - AN | """001""" | "TABELA 05 – TIPOS DE COBERTURA |  pg 10"
-premios.coberturas.ramo | inexistente | Código do ramo a que se refere o movimento e que se encontra no edital de seleção no qual a supervisionada se submeteu. Tabela de Referência 04  | sim |  | 3 | Alfanumerico - AN | """001""" | "TABELA 04 – RAMOS (DE ACORDO COM O EDITAL) _x000D_ |  pg 9 e 10"
-premios.coberturas.maxima | checar base | Valor monetário da maior importância segurada para cobertura de um risco isolado. Neste campo são consideradas duas casas decimais. _x000D_ | sim |  |  | Numérico - NU | "10000 | 00" | 
-premios.coberturas.identificacaoObjetoSegurado | inexistente | Corresponde ao tipo de objeto que será coberto. Tabela de Referência 06  | sim |  | 3 | Alfanumerico - AN | """001""" | "TABELA 06 – TIPOS DE OBJETO |  pg 11"
-premios.coberturas.premioBruto | inexistente | "Valor monetário do prêmio bruto. Prêmio bruto = prêmio comercial acrescido dos encargos e impostos |  sendo este o prêmio efetivamente que será pago pelo segurado." | sim |  |  | Numérico - NU | "10000 | 00" | 
-premios.coberturas.premioComercial | checar base | Valor monetário do prêmio comercial considerando duas casas decimais | sim |  |  | Numérico - NU | "10000 | 00" | 
-premios.coberturas.premioRetido | inexistente | Valor monetário do prêmio retido. Prêmio retido = prêmio emitido – prêmio de cosseguro cedido – prêmios cedidos em resseguro. _x000D_ | sim |  |  | Numérico - NU | "10000 | 00" | 
+<div style="overflow-x:auto;">
+    <table style='width: 2400px;'>
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Equivalente Picsel</th>
+                <th>Descrição</th>
+                <th>Obrigatorio</th>
+                <th>Mascara</th>
+                <th>Tamanho</th>
+                <th>Tipo Preenchimento</th>
+                <th>Exemplo</th>
+                <th>Referencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cnpj</td>
+                <td>Aguardando Implementação</td>
+                <td>CNPJ da sociedade seguradora </td>
+                <td>sim</td>
+                <td></td>
+                <td>14</td>
+                <td>Alfanumerico - AN</td>
+                <td>01234567891011'</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.numeroApolice</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde ao número/código do contrato do seguro, preenchido de acordo com a legislação vigente, incluindo o dígito verificador se houver</td>
+                <td>sim</td>
+                <td></td>
+                <td></td>
+                <td>Alfanumerico - AN</td>
+                <td>"APOLICE-PREMIO-01"</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.naturezaMovimento</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde à natureza do registro. Tabela de Referência 01 </td>
+                <td>sim</td>
+                <td></td>
+                <td>2</td>
+                <td>Alfanumerico - AN</td>
+                <td>"01"</td>
+                <td>TABELA 01 – NATUREZA DO PRÊMIO, pg 9</td>
+            </tr>
+            <tr>
+                <td>premios.tipoMovimento</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde ao tipo de movimento relacionado a premios. Tabela de Referência 02</td>
+                <td>sim</td>
+                <td></td>
+                <td>2</td>
+                <td>Alfanumerico - AN</td>
+                <td>"01"</td>
+                <td>TABELA 02 - TIPOS DE MOVIMENTO DE PRÊMIO, pg 9</td>
+            </tr>
+            <tr>
+                <td>premios.iof</td>
+                <td>Aguardando Implementação</td>
+                <td>Valor monetário do imposto – corresponde ao valor da IOF</td>
+                <td>sim</td>
+                <td></td>
+                <td></td>
+                <td>Numérico - NU</td>
+                <td>10000,00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.valorCorretagem</td>
+                <td>Aguardando Implementação</td>
+                <td>Valor monetário da comissão de corretagem do seguro – corresponde ao valor total da comissão.</td>
+                <td>sim</td>
+                <td></td>
+                <td></td>
+                <td>Numérico - NU</td>
+                <td>10000,00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.dataInicioApolice</td>
+                <td>seguros.DataVigenciaInicial</td>
+                <td>Data em que a apólice/bilhete iniciou ou iniciará efetivamente a sua vigência. O formato do campo deve ser: AAAA-MM-DD HH:MM:SS</td>
+                <td>sim</td>
+                <td>AAAA-MM-DD HH:MM:SS</td>
+                <td>19</td>
+                <td>Data e Hora</td>
+                <td>"2020-04-11 00:01:03"</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.dataFimApolice</td>
+                <td>seguros.DataVigenciaFinal</td>
+                <td>Data em que a apólice/bilhete encerrou ou encerrará efetivamente a sua vigência. O formato do campo deve ser: AAAA-MM-DD HH:MM:SS</td>
+                 <td>sim</td>
+                <td>AAAA-MM-DD HH:MM:SS</td>
+                <td>19</td>
+                <td>Data e Hora</td>
+                <td>"2020-04-11 00:01:03"</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.dataInicioCobertura</td>
+                <td>Será implementado na API</td>
+                <td>Data de início da cobertura. O formato do campo deve ser: AAAA-MM-DD HH:MM:SS </td>
+                 <td>sim</td>
+                <td>AAAA-MM-DD HH:MM:SS</td>
+                <td>19</td>
+                <td>Data e Hora</td>
+                <td>"2020-04-11 00:01:03"</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.dataFimCobertura</td>
+                <td>Será implementado na API</td>
+                <td>Data do final da cobertura. O formato do campo deve ser: AAAA-MM-DD HH:MM:SS </td>
+                 <td>sim</td>
+                <td>AAAA-MM-DD HH:MM:SS</td>
+                <td>19</td>
+                <td>Data e Hora</td>
+                <td>"2020-04-11 00:01:03"</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.identificacaoSegurado</td>
+                <td>seguros.CPFProdutor</td>
+                <td>Corresponde ao CPF ou CNPJ do Segurado</td>
+                <td>sim</td>
+                <td></td>
+                <td>11 ou 14</td>
+                <td>Alfanumerico - AN</td>
+                <td>01234567891011'</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.identificacaoBeneficiario</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde ao CPF ou CNPJ do Beneficiario</td>
+                <td>sim</td>
+                <td></td>
+                <td>11 ou 14</td>
+                <td>Alfanumerico - AN</td>
+                <td>01234567891011'</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.seguroIntermitente</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde à informação de se a apólice/bilhete é referente à cobertura de seguro ntermitente ou de seguro tradicional. Tabela de Referência 03 </td>
+                <td>sim</td>
+                <td></td>
+                <td>2</td>
+                <td>Alfanumerico - AN</td>
+                <td>"01"</td>
+                <td>TABELA 03 – SEGURO INTERMITENTE, pg 9</td>
+            </tr>
+            <tr>
+                <td>premios.dataMovimento</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde à data referente ao lançamento do movimento. O formato do campo deve ser: AAAA-MMDD HH:MM:SS</td>
+                <td>sim</td>
+                <td>AAAA-MM-DD HH:MM:SS</td>
+                <td>19</td>
+                <td>Data e Hora</td>
+                <td>"2020-04-11 00:01:03"</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.coberturas.identificacaoCobertura</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde ao tipo de cobertura contratado. Tabela de Referência 05 _x005F_x000D_</td>
+                <td>sim</td>
+                <td></td>
+                <td>3</td>
+                <td>Alfanumerico - AN</td>
+                <td>"001"</td>
+                <td>TABELA 05 – TIPOS DE COBERTURA, pg 10</td>
+            </tr>
+            <tr>
+                <td>premios.coberturas.ramo</td>
+                <td>Aguardando Implementação</td>
+                <td>Código do ramo a que se refere o movimento e que se encontra no edital de seleção no qual a supervisionada se submeteu. Tabela de Referência 04 </td>
+                <td>sim</td>
+                <td></td>
+                <td>3</td>
+                <td>Alfanumerico - AN</td>
+                <td>"001"</td>
+                <td>TABELA 04 – RAMOS (DE ACORDO COM O EDITAL) _x005F_x000D_, pg 9 e 10</td>
+            </tr>
+            <tr>
+                <td>premios.coberturas.maxima</td>
+                <td>Será implementado na API</td>
+                <td>Valor monetário da maior importância segurada para cobertura de um risco isolado. Neste campo são consideradas duas casas decimais. _x005F_x000D_</td>
+                <td>sim</td>
+                <td></td>
+                <td></td>
+                <td>Numérico - NU</td>
+                <td>10000,00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.coberturas.identificacaoObjetoSegurado</td>
+                <td>Aguardando Implementação</td>
+                <td>Corresponde ao tipo de objeto que será coberto. Tabela de Referência 06 </td>
+                <td>sim</td>
+                <td></td>
+                <td>3</td>
+                <td>Alfanumerico - AN</td>
+                <td>"001"</td>
+                <td>TABELA 06 – TIPOS DE OBJETO, pg 11</td>
+            </tr>
+            <tr>
+                <td>premios.coberturas.premioBruto</td>
+                <td>Aguardando Implementação</td>
+                <td>Valor monetário do prêmio bruto. Prêmio bruto = prêmio comercial acrescido dos encargos e impostos, sendo este o prêmio efetivamente que será pago pelo segurado.</td>
+                <td>sim</td>
+                <td></td>
+                <td></td>
+                <td>Numérico - NU</td>
+                <td>10000,00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.coberturas.premioComercial</td>
+                <td>Será implementado na API</td>
+                <td>Valor monetário do prêmio comercial considerando duas casas decimais</td>
+                <td>sim</td>
+                <td></td>
+                <td></td>
+                <td>Numérico - NU</td>
+                <td>10000,00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>premios.coberturas.premioRetido</td>
+                <td>Aguardando Implementação</td>
+                <td>Valor monetário do prêmio retido. Prêmio retido = prêmio emitido – prêmio de cosseguro cedido – prêmios cedidos em resseguro. _x005F_x000D_</td>
+                <td>sim</td>
+                <td></td>
+                <td></td>
+                <td>Numérico - NU</td>
+                <td>10000,00</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 
 ## Mapa Sandbox Sinistro
 
