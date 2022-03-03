@@ -609,7 +609,7 @@ Não possue parâmetros
 ## Mapa Alterar Proposta
 
 <div style="overflow-x:auto;">
-    <table style='width: 2500px;'>
+    <table style='width: 2100px;'>
         <thead>
             <tr>
                 <th>Campo</th>
