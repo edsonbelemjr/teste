@@ -606,6 +606,37 @@ Não possue parâmetros
 
 # PicSel SUSEP 
 
+## Mapa Cancelar Apolice
+
+<div style="overflow-x:auto;">
+    <table style='width: 1500px;'>
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Equivalente Picsel</th>
+                <th>Descrição</th>
+                <th>Obrigatorio</th>
+                <th>Mascara</th>
+                <th>Tamanho</th>
+                <th>Tipo Preenchimento</th>
+                <th>Exemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cdProposta</td>
+                <td>Aguardando Implementação</td>
+                <td>Código da proposta gerado pelo MAPA</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 
 ## Mapa Enviar Sinistro
 
