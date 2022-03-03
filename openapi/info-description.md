@@ -606,6 +606,78 @@ Não possue parâmetros
 
 # PicSel SUSEP 
 
+
+## Mapa Enviar Sinistro
+
+<div style="overflow-x:auto;">
+    <table style='width: 1500px;'>
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Equivalente Picsel</th>
+                <th>Descrição</th>
+                <th>Obrigatorio</th>
+                <th>Mascara</th>
+                <th>Tamanho</th>
+                <th>Tipo Preenchimento</th>
+                <th>Exemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cdProposta</td>
+                <td>Aguardando Implementação</td>
+                <td>Código da proposta gerado pelo MAPA</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrApolice</td>
+                <td>seguros.id</td>
+                <td>Número da apólice</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>20</td>
+                <td>Alfanumérico sem caracteres especiais - AS</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>cdEventoCobertura</td>
+                <td>Aguardando Implementação</td>
+                <td>Código do evento/Cobetura do sinistro</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>4</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>dtAvisoSinistro</td>
+                <td>sinistro.DataSinistro</td>
+                <td>Data do aviso do sinistro</td>
+                <td>Sim</td>
+                <td>dd/MM/yyyy</td>
+                <td>10</td>
+                <td>Data - DT</td>
+                <td>20/01/2022</td>
+            </tr>
+            <tr>
+                <td>vlReservaTecnica</td>
+                <td>Aguardando Implementação</td>
+                <td>Valor da Reserva Técnica</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>12,2</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 ## Mapa Alterar Sinistro
 
 <div style="overflow-x:auto;">
