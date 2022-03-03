@@ -606,6 +606,58 @@ Não possue parâmetros
 
 # PicSel SUSEP 
 
+## Mapa Enviar Apolice
+
+<div style="overflow-x:auto;">
+    <table style='width: 1500px;'>
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Equivalente Picsel</th>
+                <th>Descrição</th>
+                <th>Obrigatorio</th>
+                <th>Mascara</th>
+                <th>Tamanho</th>
+                <th>Tipo Preenchimento</th>
+                <th>Exemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cdProposta</td>
+                <td>Aguardando Implementação</td>
+                <td>Código da proposta gerado pelo MAPA</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>9</td>
+                <td>Numérico - NU</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nrApolice</td>
+                <td>seguros.ID</td>
+                <td>Número da apólice emitida pela seguradora</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>20</td>
+                <td>Alfanumérico sem caracteres especiais - AS</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>dtApolice</td>
+                <td>Aguardando Implementação</td>
+                <td>Data que a apolice foi gerada</td>
+                <td>Sim</td>
+                <td>N.A.</td>
+                <td>10</td>
+                <td>Data - DT</td>
+                <td>20/01/2022</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
 ## Mapa Alterar Apolice
 
 <div style="overflow-x:auto;">
