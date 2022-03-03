@@ -606,7 +606,7 @@ Não possue parâmetros
 
 # PicSel SUSEP 
 
-## Mapa Cancelar Apolice
+## Mapa Cancelar Proposta
 
 <div style="overflow-x:auto;">
     <table style='width: 1100px;'>
